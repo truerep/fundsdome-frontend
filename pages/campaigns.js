@@ -1,7 +1,7 @@
 import React from 'react'
 import Head from 'next/head'
 
-import { Campaigns } from '@/components'
+import { Campaigns, Header } from '@/components'
 import { getAllGroups } from '@/api'
 
 const campaigns = ({data}) => {
@@ -12,6 +12,7 @@ const campaigns = ({data}) => {
 					Campaigns | FundsDome
 				</title>
 			</Head>
+			<Header />
 			<Campaigns groupsList={data} />
 		</>
   )

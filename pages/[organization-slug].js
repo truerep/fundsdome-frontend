@@ -1,10 +1,11 @@
 import React from 'react'
 import Head from 'next/head'
-import axios from 'axios'
+
+import { getGroupDetail } from '@/api'
 
 import { OrganizationProvider } from '@/context/OrganizationContext'
 
-import { Banner, PageWrapper } from '@/components'
+import { Banner, Header, PageWrapper } from '@/components'
 
 const organization = ({data}) => {
   return (
@@ -15,6 +16,7 @@ const organization = ({data}) => {
                 Organization Page
             </title>
         </Head>
+        <Header />
         <OrganizationProvider data={data}>
           <Banner />
           <PageWrapper />
@@ -26,8 +28,8 @@ const organization = ({data}) => {
 export async function getServerSideProps(context) {
   const organizationSlug = context.params?.["organization-slug"]
   try {
-    const res = await axios.get(`http://127.0.0.1:8000/conversation/slug/${organizationSlug}`)
-    return { props: { data: res.data } }
+    const res = await getGroupDetail(organizationSlug)
+    return { props: { data: res } }
   } catch (err) {
     return { props: { data: null } }
   }

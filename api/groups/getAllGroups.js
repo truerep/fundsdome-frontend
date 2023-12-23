@@ -1,10 +1,10 @@
 import axios from 'axios';
 
-const API_BASE_URL = 'http://127.0.0.1:8000';
+import { appEnv } from '@/helpers';
 
 const getAllGroups = async () => {
   try {
-    const response = await axios.get(`${API_BASE_URL}/conversation/all/1`, {});
+    const response = await axios.get(`${appEnv.apiUrl}/conversation/all/1`, {});
 
     return response.data;
   } catch (error) {

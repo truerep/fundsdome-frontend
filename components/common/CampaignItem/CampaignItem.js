@@ -1,32 +1,43 @@
+import Link from 'next/link';
 import React from 'react'
 import styled from 'styled-components'
 
 const CampaignItem = ({groupData}) => {
   return (
-    <Wrapper>
-		<CampaignContext>
-			<CampaignThumbnail src='https://truerep.github.io/fundsdome-ui/assets/images/donations/donation-1-1.jpg' />
-			<Donation>
-				<ProgressBox>
-					<ProgressBar>
-						<ProgressFilled>
-							<ProgressNumber>90%</ProgressNumber>
-						</ProgressFilled>
-					</ProgressBar>
-				</ProgressBox>
-				<DonationAmount>
-					<h5>Raised $80,050</h5>
-					<h5>Goal $90,000</h5>
-				</DonationAmount>
-			</Donation>
-		</CampaignContext>
-		<Info>
-			<Title>{groupData?.chatName}</Title>
-			<Description>{groupData?.description}</Description>
-		</Info>
-	</Wrapper>
+	<Container>
+		<Link href={`/${groupData?.slug}`}>
+			<Wrapper>
+				<CampaignContext>
+					<CampaignThumbnail src='https://truerep.github.io/fundsdome-ui/assets/images/donations/donation-1-1.jpg' />
+					<Donation>
+						<ProgressBox>
+							<ProgressBar>
+								<ProgressFilled>
+									<ProgressNumber>90%</ProgressNumber>
+								</ProgressFilled>
+							</ProgressBar>
+						</ProgressBox>
+						<DonationAmount>
+							<h5>Raised $80,050</h5>
+							<h5>Goal $90,000</h5>
+						</DonationAmount>
+					</Donation>
+				</CampaignContext>
+				<Info>
+					<Title>{groupData?.chatName}</Title>
+					<Description>{groupData?.description}</Description>
+				</Info>
+			</Wrapper>
+		</Link>
+	</Container>
   )
 }
+
+const Container = styled.div`
+	a {
+		text-decoration: none;
+	}
+`;
 
 const Wrapper = styled.div`
 	padding: 22px;
@@ -38,6 +49,8 @@ const Wrapper = styled.div`
 	background-position: center;
 	background-size: cover;
 	border-radius: 20px;
+	color: #351C42;
+	text-decoration: none;
 `;
 
 const CampaignContext = styled.div`

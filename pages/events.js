@@ -3,7 +3,7 @@ import Head from 'next/head'
 
 import { getAllEvents } from '@/api'
 
-import { Events } from '@/components'
+import { Events, Header } from '@/components'
 
 const events = ({data}) => {
   return (
@@ -13,6 +13,7 @@ const events = ({data}) => {
 					Events | FundsDome
 				</title>
 			</Head>
+			<Header />
 			<Events eventsList={data} />
 		</>
   )

@@ -2,9 +2,9 @@ import axios from 'axios';
 
 import { appEnv } from '@/helpers';
 
-const getAllEvents = async () => {
+const getGroupDetail = async (groupSlug) => {
   try {
-    const response = await axios.get(`${appEnv.apiUrl}/events/all/1`, {});
+    const response = await axios.get(`${appEnv.apiUrl}/conversation/slug/${groupSlug}`, {});
 
     return response.data;
   } catch (error) {
@@ -13,4 +13,4 @@ const getAllEvents = async () => {
   }
 }
 
-export default getAllEvents;
+export default getGroupDetail;

@@ -40,6 +40,11 @@ const Wrapper = styled.div`
 	&:nth-child(even) {
 		& > div:nth-child(1) {
 			order: 1;
+
+			div {
+				top: unset;
+				bottom: 30px;
+			}
 		}
 
 		& > div:nth-child(2) {
