@@ -2,20 +2,34 @@ import React from 'react'
 import styled from 'styled-components';
 
 import { Container } from '../common/UiElements'
-import { CampaignItem } from '../common';
+import { CampaignItem, Loader } from '../common';
 
-const Campaigns = ({groupsList}) => {
+const Campaigns = ({
+	sectionRef,
+	groupsList,
+	isLoading
+}) => {
   return (
-    <CampaignsWrapper>
+	<CampaignsContainer ref={sectionRef}>
+		<CampaignsWrapper>
+			{
+				groupsList.length && groupsList.map((group) => (
+					<CampaignItem key={group._id} groupData={group} />
+				))
+			}
+		</CampaignsWrapper>
 		{
-			groupsList?.groups.map((group) => (
-				<CampaignItem key={group._id} groupData={group} />
-			))
+			isLoading ? (
+				<Loader />
+			) : ("")
 		}
-		{console.log(groupsList, "<--groupsList")}
-    </CampaignsWrapper>
+	</CampaignsContainer>
   )
 }
+
+const CampaignsContainer = styled.div`
+	padding-bottom: 70px;
+`;
 
 const CampaignsWrapper = styled(Container)`
 	display: grid;

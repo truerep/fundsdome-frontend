@@ -1,7 +1,7 @@
 import React from 'react'
 import Head from 'next/head'
 
-import { Campaigns, Header } from '@/components'
+import { Campaigns, Footer, Header } from '@/components'
 import { getAllGroups } from '@/api'
 
 const campaigns = ({data}) => {
@@ -14,6 +14,7 @@ const campaigns = ({data}) => {
 			</Head>
 			<Header />
 			<Campaigns groupsList={data} />
+			<Footer />
 		</>
   )
 }

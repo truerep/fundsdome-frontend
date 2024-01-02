@@ -3,7 +3,7 @@ import Head from 'next/head'
 
 import { getAllEvents } from '@/api'
 
-import { Events, Header } from '@/components'
+import { Events, Footer, Header } from '@/components'
 
 const events = ({data}) => {
   return (
@@ -15,6 +15,7 @@ const events = ({data}) => {
 			</Head>
 			<Header />
 			<Events eventsList={data} />
+			<Footer />
 		</>
   )
 }

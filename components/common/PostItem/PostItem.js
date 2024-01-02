@@ -21,7 +21,7 @@ const PostItem = ({organizationName, timeStamp, description, imageUrl}) => {
                 ) : ("")
             }
         </PostBody>
-        <PostActions>
+        {/* <PostActions>
             <ActionItem>
                 <img src="https://ik.imagekit.io/sahildhingra/heart-icon-light.png" alt="like" />
                 <span>Like</span>
@@ -33,7 +33,7 @@ const PostItem = ({organizationName, timeStamp, description, imageUrl}) => {
         </PostActions>
         <PostComments>
             <Comments />
-        </PostComments>
+        </PostComments> */}
     </PostContainer>
   )
 }

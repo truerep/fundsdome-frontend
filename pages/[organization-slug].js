@@ -5,7 +5,7 @@ import { getGroupDetail } from '@/api'
 
 import { OrganizationProvider } from '@/context/OrganizationContext'
 
-import { Banner, Header, PageWrapper } from '@/components'
+import { Banner, Footer, Header, PageWrapper } from '@/components'
 
 const organization = ({data}) => {
   return (
@@ -21,6 +21,7 @@ const organization = ({data}) => {
           <Banner />
           <PageWrapper />
         </OrganizationProvider>
+        <Footer />
     </>
   )
 }

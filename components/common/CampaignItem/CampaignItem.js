@@ -2,13 +2,16 @@ import Link from 'next/link';
 import React from 'react'
 import styled from 'styled-components'
 
-const CampaignItem = ({groupData}) => {
+const CampaignItem = ({
+	groupData,
+	campaignBanner
+}) => {
   return (
 	<Container>
 		<Link href={`/${groupData?.slug}`}>
 			<Wrapper>
 				<CampaignContext>
-					<CampaignThumbnail src='https://truerep.github.io/fundsdome-ui/assets/images/donations/donation-1-1.jpg' />
+					<CampaignThumbnail src={campaignBanner} />
 					<Donation>
 						<ProgressBox>
 							<ProgressBar>
@@ -88,6 +91,7 @@ const Title = styled.h3`
 	letter-spacing: -0.66px;
 	text-transform: capitalize;
 	margin-bottom: 15px;
+	font-family: Quicksand, sans-serif;
 `;
 
 const Description = styled.p`

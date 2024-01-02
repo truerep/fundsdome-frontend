@@ -2,9 +2,9 @@ import axios from 'axios';
 
 import { appEnv } from '@/helpers';
 
-const getAllGroups = async (pageNum = 1) => {
+const getGroupDonations = async (groupId) => {
   try {
-    const response = await axios.get(`${appEnv.apiUrl}/conversation/all/${pageNum}`, {});
+    const response = await axios.get(`${appEnv.apiUrl}/donations/group/${groupId}`, {});
 
     return response.data;
   } catch (error) {
@@ -12,5 +12,4 @@ const getAllGroups = async (pageNum = 1) => {
     throw error;
   }
 }
-
-export default getAllGroups;
+export default getGroupDonations;
