@@ -5,6 +5,7 @@ import CreatePost from "./CreatePost";
 import CampaignItem from "./CampaignItem";
 import EventItem from "./EventItem";
 import Loader from "./Loader";
+import Modal from "./Modal";
 
 export {
     Header,
@@ -13,5 +14,6 @@ export {
     CreatePost,
     CampaignItem,
     EventItem,
-    Loader
+    Loader,
+    Modal
 }

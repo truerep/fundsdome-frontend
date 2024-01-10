@@ -8,7 +8,11 @@ import Banner from './Banner'
 const BannerContainer = () => {
   const organizationData = useOrganizationContext();
   const [donations, setDonations] = useState([])
+  const [donationId, setDonationId] = useState()
+  const [donationAmount, setDonationAmount] = useState()
   const [donationTotal, setDonationTotal] = useState({})
+  const [showModal, setShowModal] = useState(false)
+  const [showAmountModal, setShowAmountModal] = useState(false)
 
   const getDonations = async (groupId) => {
     const res = await getGroupDonations(groupId);
@@ -23,7 +27,6 @@ const BannerContainer = () => {
       currentAmount,
       percentage
     })
-    console.log(res, donationTotal, "<--donationsr")
   }
 
   useEffect(() => {
@@ -36,6 +39,14 @@ const BannerContainer = () => {
       donationTotal={donationTotal}
       donations={donations}
       organizationData={organizationData}
+      showModal={showModal}
+      setShowModal={setShowModal}
+      showAmountModal={showAmountModal}
+      setShowAmountModal={setShowAmountModal}
+      donationId={donationId}
+      setDonationId={setDonationId}
+      donationAmount={donationAmount}
+      setDonationAmount={setDonationAmount}
     />
   )
 }

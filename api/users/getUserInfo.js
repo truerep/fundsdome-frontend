@@ -1,11 +1,11 @@
 import axios from 'axios';
 
-const API_BASE_URL = 'http://localhost:8000';
+import { appEnv } from '@/helpers';
 
 const getUserInfo = async () => {
   try {
     const token = localStorage.getItem('token');
-    const response = await axios.get(`${API_BASE_URL}/users/user-info`, {
+    const response = await axios.get(`${appEnv.apiUrl}/users/user-info`, {
       headers: {
         Authorization: `Bearer ${token}`,
       },

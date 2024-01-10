@@ -1,10 +1,10 @@
 import axios from 'axios';
 
-const API_BASE_URL = 'http://localhost:8000';
+import { appEnv } from '@/helpers';
 
 const loginUser = async (username, password) => {
   try {
-    const response = await axios.post(`${API_BASE_URL}/users/login`, {
+    const response = await axios.post(`${appEnv.apiUrl}/users/login`, {
       username,
       password,
     });

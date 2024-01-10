@@ -1,14 +1,23 @@
 /* eslint-disable @next/next/no-img-element */
 
-import React from 'react'
+import React, { useState } from 'react'
 import styled from 'styled-components'
 
 import { Container } from '@/components/common/UiElements'
+import { Modal } from '@/components/common'
 
 const Banner = ({
     donationTotal,
     organizationData,
-    percentage
+    donations,
+    donationId,
+    setDonationId,
+    donationAmount,
+    setDonationAmount,
+    showModal,
+    setShowModal,
+    showAmountModal,
+    setShowAmountModal
 }) => {
   return (
     <BannerWrapper>
@@ -36,11 +45,60 @@ const Banner = ({
                         <h5>Goal ${donationTotal?.targetAmount}</h5>
                     </DonationAmount>
                 </Donation>
-                <DonateButton href="https://fundsdome.com/">
+                <DonateButton
+                    onClick={() => setShowModal(true)}
+                >
                     Donate
                 </DonateButton>
             </OrganizationActionLinks>
         </OraganizationDetailsWrapper>
+        <Modal 
+            showModal={showModal}
+            setShowModal={setShowModal}
+        >
+            <EventsWrapper>
+                {
+                    donations.length && donations.map((donation, index) => (
+                        <EventItem key={donation._id}>
+                            {console.log(donation)}
+                            <img src={donation?.event?.thumbnail} />
+                            <DonationDetail>
+                                <h4>{donation?.event?.name}</h4>
+                                <DonationAmount>
+                                    <h5>Raised ${donation?.currentAmount}</h5>
+                                    <h5>Goal ${donation?.targetAmount}</h5>
+                                </DonationAmount>
+                                <ProgressBar className='bar'>
+                                    <ProgressFilled percentage={parseInt((donation?.currentAmount / donation?.targetAmount) * 100)}></ProgressFilled>
+                                </ProgressBar>
+                            </DonationDetail>
+                            <DonateBtn
+                                onClick={() => {
+                                    setDonationId(donation._id)
+                                    setShowAmountModal(true)
+                                }}
+                            >
+                                Donate
+                            </DonateBtn>
+                        </EventItem>
+                    )) 
+                }
+            </EventsWrapper>
+        </Modal>
+        <Modal 
+            showModal={showAmountModal}
+            setShowModal={setShowAmountModal}
+        >
+            <AmountModalWrapper>
+                <input type="text" value={donationAmount} onChange={(e) => setDonationAmount(e.target.value)} placeholder='Enter Amount USD $' />
+                <DonateBtn
+                    target='_blank'
+                    href={`/contribute?amount=${donationAmount}&donationId=${donationId}`}
+                >
+                    Donate
+                </DonateBtn>
+            </AmountModalWrapper>
+        </Modal>
     </BannerWrapper>
   )
 }
@@ -119,6 +177,7 @@ const DonateButton = styled.a`
     color: #fff;
     font-weight: 600;
     margin-top: -15px;
+    cursor: pointer;
 
     &:hover {
         transform: translateY(-3px);
@@ -202,6 +261,91 @@ const DonationAmount = styled.div`
 		margin-bottom: 0;
 		font-family: "Quicksand", sans-serif;
 	}
+`;
+
+const EventsWrapper = styled.div`
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    
+    @media (min-width: 576px) {
+        min-width: 450px;
+    }
+`;
+
+const EventItem = styled.div`
+    display: flex;
+    align-items: center;
+
+    &:not(:last-child) {
+        margin-bottom: 15px;
+    }
+
+    .bar {
+        margin-top: 5px;
+        transform: scaleY(0.6);
+
+        & > div::after, & > div::before {
+            content: unset;
+        }
+    }
+
+    h4 {
+        font-size: 15px;
+        font-weight: 400;
+    }
+
+    img {
+        height: 60px;
+        width: 80px;
+        object-fit: cover;
+        border-radius: 5px;
+    }
+`;
+
+const DonationDetail = styled.div`
+    padding: 0 15px;
+    flex: 1;
+`;
+
+const DonateBtn = styled.a`
+    margin-left: auto;
+    display: inline-block;
+    background-color: #fff;
+    padding: 9px 18px;
+    border-radius: 10px;
+    font-family: "Quicksand", sans-serif;
+    font-size: 13px;
+    color: #fff;
+    font-weight: 600;
+    cursor: pointer;
+    border: 1px solid #9F85F7;
+    color: #9F85F7;
+
+    &:hover {
+        background-color: #9F85F7;
+        color: #fff;
+    }
+`;
+
+const AmountModalWrapper = styled.div`
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    max-width: 220px;
+
+    input {
+        border-radius: 10px;
+        padding: 10px;
+        width: calc(100% - 20px);
+        border: 1px solid #965995;
+        outline: 0;
+    }
+
+    a {
+        margin-top: 20px;
+    }
 `;
 
 export default Banner
