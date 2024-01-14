@@ -93,7 +93,7 @@ const Banner = ({
                 <input type="text" value={donationAmount} onChange={(e) => setDonationAmount(e.target.value)} placeholder='Enter Amount USD $' />
                 <DonateBtn
                     target='_blank'
-                    href={`/contribute?amount=${donationAmount}&donationId=${donationId}`}
+                    href={`https://app.fundsdome.com/contribute?amount=${donationAmount}&donationId=${donationId}`}
                 >
                     Donate
                 </DonateBtn>
