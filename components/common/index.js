@@ -6,6 +6,7 @@ import CampaignItem from "./CampaignItem";
 import EventItem from "./EventItem";
 import Loader from "./Loader";
 import Modal from "./Modal";
+import LoginModal from "./LoginModal";
 
 export {
     Header,
@@ -15,5 +16,6 @@ export {
     CampaignItem,
     EventItem,
     Loader,
-    Modal
+    Modal,
+    LoginModal
 }

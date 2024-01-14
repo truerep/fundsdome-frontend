@@ -4,6 +4,7 @@ import { useOrganizationContext } from '@/context/OrganizationContext';
 import { getGroupDonations } from '@/api';
 
 import Banner from './Banner'
+import { authService } from '@/services';
 
 const BannerContainer = () => {
   const organizationData = useOrganizationContext();
@@ -13,6 +14,7 @@ const BannerContainer = () => {
   const [donationTotal, setDonationTotal] = useState({})
   const [showModal, setShowModal] = useState(false)
   const [showAmountModal, setShowAmountModal] = useState(false)
+  const [showLoginModal, setShowLoginModal] = useState(true)
 
   const getDonations = async (groupId) => {
     const res = await getGroupDonations(groupId);
@@ -27,6 +29,15 @@ const BannerContainer = () => {
       currentAmount,
       percentage
     })
+  }
+
+  const handleDonation = async () => {
+    const isAuthenticated = await authService()
+    if (donationAmount && isAuthenticated) {
+      window.open(`https://app.fundsdome.com/contribute?amount=${donationAmount}&donationId=${donationId}`, '_blank');
+    } else {
+      setShowLoginModal(true)
+    }
   }
 
   useEffect(() => {
@@ -47,6 +58,9 @@ const BannerContainer = () => {
       setDonationId={setDonationId}
       donationAmount={donationAmount}
       setDonationAmount={setDonationAmount}
+      showLoginModal={showLoginModal}
+      setShowLoginModal={setShowLoginModal}
+      handleDonation={handleDonation}
     />
   )
 }

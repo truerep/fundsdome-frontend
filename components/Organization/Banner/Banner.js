@@ -4,7 +4,7 @@ import React, { useState } from 'react'
 import styled from 'styled-components'
 
 import { Container } from '@/components/common/UiElements'
-import { Modal } from '@/components/common'
+import { LoginModal, Modal } from '@/components/common'
 
 const Banner = ({
     donationTotal,
@@ -17,7 +17,10 @@ const Banner = ({
     showModal,
     setShowModal,
     showAmountModal,
-    setShowAmountModal
+    setShowAmountModal,
+    showLoginModal,
+    setShowLoginModal,
+    handleDonation
 }) => {
   return (
     <BannerWrapper>
@@ -91,13 +94,16 @@ const Banner = ({
         >
             <AmountModalWrapper>
                 <input type="text" value={donationAmount} onChange={(e) => setDonationAmount(e.target.value)} placeholder='Enter Amount USD $' />
-                <DonateBtn
-                    target='_blank'
-                    href={`https://app.fundsdome.com/contribute?amount=${donationAmount}&donationId=${donationId}`}
-                >
+                <DonateBtn onClick={() => handleDonation()}>
                     Donate
                 </DonateBtn>
             </AmountModalWrapper>
+        </Modal>
+        <Modal
+            showModal={showLoginModal}
+            setShowModal={setShowLoginModal}
+        >
+            <LoginModal setShowLoginModal={setShowLoginModal} />
         </Modal>
     </BannerWrapper>
   )
@@ -308,7 +314,7 @@ const DonationDetail = styled.div`
     flex: 1;
 `;
 
-const DonateBtn = styled.a`
+const DonateBtn = styled.button`
     margin-left: auto;
     display: inline-block;
     background-color: #fff;
@@ -343,7 +349,7 @@ const AmountModalWrapper = styled.div`
         outline: 0;
     }
 
-    a {
+    button {
         margin-top: 20px;
     }
 `;
