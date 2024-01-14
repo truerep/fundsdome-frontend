@@ -1,4 +1,5 @@
 import React from 'react'
+import styled from 'styled-components'
 
 const Login = ({
   username,
@@ -8,7 +9,7 @@ const Login = ({
   handleLogin
 }) => {
   return (
-    <div>
+    <LoginWrapper>
       <input
         type="text"
         placeholder="Username"
@@ -21,9 +22,24 @@ const Login = ({
         value={password}
         onChange={(e) => setPassword(e.target.value)}
       />
-      <button onClick={handleLogin}>Login</button>
-    </div>
+      <button className="btn-primary" onClick={handleLogin}>Login</button>
+    </LoginWrapper>
   )
 }
+
+const LoginWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+  border: 1px solid lightgray;
+  max-width: 450px;
+  border-radius: 10px;
+
+  button {
+    width: fit-content;
+    margin-left: auto;
+  }
+`;
 
 export default Login
