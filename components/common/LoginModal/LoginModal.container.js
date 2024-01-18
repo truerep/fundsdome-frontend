@@ -5,7 +5,8 @@ import { loginUser } from '@/api';
 import LoginModal from './LoginModal'
 
 const LoginModalContainer = ({
-    setShowLoginModal
+    setShowLoginModal,
+    redirectUrl
 }) => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
@@ -13,6 +14,10 @@ const LoginModalContainer = ({
   const handleLogin = async () => {
     try {
       const token = await loginUser(username, password);
+      if (token && redirectUrl) {
+        window.location = redirectUrl;
+        setShowLoginModal(false)
+      }
       setShowLoginModal(false)
     } catch (error) {}
   };

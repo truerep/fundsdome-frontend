@@ -14,7 +14,7 @@ const BannerContainer = () => {
   const [donationTotal, setDonationTotal] = useState({})
   const [showModal, setShowModal] = useState(false)
   const [showAmountModal, setShowAmountModal] = useState(false)
-  const [showLoginModal, setShowLoginModal] = useState(true)
+  const [showLoginModal, setShowLoginModal] = useState(false)
 
   const getDonations = async (groupId) => {
     const res = await getGroupDonations(groupId);

@@ -27,16 +27,26 @@ input {
 .btn-primary {
   display: inline-block;
   background-color: #9F85F7;
+  border: 1px solid #9F85F7;
+  color: #fff;
   padding: 12px 22px;
   border-radius: 10px;
   font-family: "Quicksand",sans-serif;
   font-size: 13px;
-  color: #fff;
   font-weight: 600;
   cursor: pointer;
-  border: 0;
 }
 
 .btn-primary:hover {
   background-color: #8e6efa;
+  transform: translateY(-2px);
+}
+
+.btn-outlined {
+  color: #9F85F7!important;
+  background-color: #fff;
+}
+
+.btn-outlined:hover {
+  color: #fff!important;
 }
