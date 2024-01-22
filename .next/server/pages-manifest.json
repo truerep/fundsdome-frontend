@@ -1,1 +1,1 @@
-{"/_app":"pages/_app.js","/_document":"pages/_document.js","/_error":"pages/_error.js","/":"pages/index.html","/login":"pages/login.html","/[organization-slug]":"pages/[organization-slug].js","/events":"pages/events.js","/campaigns":"pages/campaigns.js","/404":"pages/404.html"}
+{"/_error":"pages/_error.js","/_app":"pages/_app.js","/_document":"pages/_document.js","/":"pages/index.html","/login":"pages/login.html","/campaigns":"pages/campaigns.js","/events":"pages/events.js","/[organization-slug]":"pages/[organization-slug].js","/404":"pages/404.html"}

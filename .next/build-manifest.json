@@ -5,8 +5,8 @@
   "devFiles": [],
   "ampDevFiles": [],
   "lowPriorityFiles": [
-    "static/XAHa2ABjWjiMge_yQ_UXe/_buildManifest.js",
-    "static/XAHa2ABjWjiMge_yQ_UXe/_ssgManifest.js"
+    "static/C7nsuSEsa0h1C79q8bnT5/_buildManifest.js",
+    "static/C7nsuSEsa0h1C79q8bnT5/_ssgManifest.js"
   ],
   "rootMainFiles": [],
   "pages": {
@@ -23,8 +23,8 @@
       "static/chunks/main-bac2f07e2c919777.js",
       "static/chunks/865-362e6388339f77eb.js",
       "static/chunks/871-9efadab4428c1fc9.js",
-      "static/chunks/615-ca2ad05a4f5ffe6c.js",
-      "static/chunks/pages/[organization-slug]-363b01cfce18a7c7.js"
+      "static/chunks/158-12ac6ee877dc6257.js",
+      "static/chunks/pages/[organization-slug]-600c72c435112234.js"
     ],
     "/_app": [
       "static/chunks/webpack-f164db4954bac6ec.js",
@@ -45,8 +45,8 @@
       "static/chunks/main-bac2f07e2c919777.js",
       "static/chunks/865-362e6388339f77eb.js",
       "static/chunks/871-9efadab4428c1fc9.js",
-      "static/chunks/615-ca2ad05a4f5ffe6c.js",
-      "static/chunks/pages/campaigns-65c9e2351813b7a0.js"
+      "static/chunks/158-12ac6ee877dc6257.js",
+      "static/chunks/pages/campaigns-3ea451c12011d71f.js"
     ],
     "/events": [
       "static/chunks/webpack-f164db4954bac6ec.js",
@@ -54,8 +54,8 @@
       "static/chunks/main-bac2f07e2c919777.js",
       "static/chunks/865-362e6388339f77eb.js",
       "static/chunks/871-9efadab4428c1fc9.js",
-      "static/chunks/615-ca2ad05a4f5ffe6c.js",
-      "static/chunks/pages/events-3eafbb389961a0bc.js"
+      "static/chunks/158-12ac6ee877dc6257.js",
+      "static/chunks/pages/events-da1666cc952fe9c4.js"
     ],
     "/login": [
       "static/chunks/webpack-f164db4954bac6ec.js",
@@ -63,8 +63,8 @@
       "static/chunks/main-bac2f07e2c919777.js",
       "static/chunks/865-362e6388339f77eb.js",
       "static/chunks/871-9efadab4428c1fc9.js",
-      "static/chunks/615-ca2ad05a4f5ffe6c.js",
-      "static/chunks/pages/login-a26d6f7e5be1780c.js"
+      "static/chunks/158-12ac6ee877dc6257.js",
+      "static/chunks/pages/login-87a195a50989d1af.js"
     ]
   },
   "ampFirstPages": []

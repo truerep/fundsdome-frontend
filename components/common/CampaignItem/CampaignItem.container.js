@@ -1,11 +1,13 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 
-import { getLatestGroupPost } from '@/api';
+import { getGroupDonations, getLatestGroupPost } from '@/api';
 
 import CampaignItem from './CampaignItem'
 
 const CampaignItemContainer = ({groupData}) => {
   const [campaignBanner, setCampaignBanner] = useState('https://i.stack.imgur.com/IA7jp.gif');
+  const [donationTotal, setDonationTotal] = useState({})
+
   const getGroupBanner = async (groupId) => {
     const res = await getLatestGroupPost(groupId);
     if(res?.posts?.length) {
@@ -15,14 +17,33 @@ const CampaignItemContainer = ({groupData}) => {
     }
   }
   
+  const getDonations = async (groupId) => {
+    const res = await getGroupDonations(groupId);
+    
+    const targetAmount = res.reduce((acc, obj) => acc + obj.targetAmount, 0);
+    const currentAmount = res.reduce((acc, obj) => acc + obj.currentAmount, 0);
+    const percentage = parseInt((currentAmount / targetAmount) * 100);
+
+    setDonationTotal({
+      targetAmount,
+      currentAmount,
+      percentage
+    })
+  }
+
   if(groupData?._id) {
     getGroupBanner(groupData?._id)
   }
+
+  useEffect(() => {
+    getDonations(groupData?._id)
+  }, [groupData])
 
   return (
     <CampaignItem 
       groupData={groupData} 
       campaignBanner={campaignBanner}
+      donationTotal={donationTotal}
     />
   )
 }

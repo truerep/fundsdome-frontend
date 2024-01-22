@@ -13,7 +13,8 @@ const Header = ({
 }) => {
   return (
     <Wrapper>
-        <Logo src="https://www.goomlandscapes.co.nz/wp-content/uploads/2018/08/logo-placeholder.png" alt="fundsdome-logo" />
+        {/* <Logo src="https://www.goomlandscapes.co.nz/wp-content/uploads/2018/08/logo-placeholder.png" alt="fundsdome-logo" /> */}
+        <Logo src="https://ik.imagekit.io/sahildhingra/fundsdome-logo.jpeg?updatedAt=1705766654348" alt="fundsdome-logo" />
         <Nav>
             <Item>
                 <Link href="/" className={router.pathname === '/' ? 'active' : ''}>
@@ -79,7 +80,7 @@ const Wrapper = styled.div`
 `;
 
 const Logo = styled.img`
-    height: 50px;
+    height: 70px;
 `;
 
 const Nav = styled.ul`

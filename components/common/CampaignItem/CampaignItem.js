@@ -4,7 +4,8 @@ import styled from 'styled-components'
 
 const CampaignItem = ({
 	groupData,
-	campaignBanner
+	campaignBanner,
+	donationTotal
 }) => {
   return (
 	<Container>
@@ -12,19 +13,23 @@ const CampaignItem = ({
 			<Wrapper>
 				<CampaignContext>
 					<CampaignThumbnail src={campaignBanner} />
-					<Donation>
-						<ProgressBox>
-							<ProgressBar>
-								<ProgressFilled>
-									<ProgressNumber>90%</ProgressNumber>
-								</ProgressFilled>
-							</ProgressBar>
-						</ProgressBox>
-						<DonationAmount>
-							<h5>Raised $80,050</h5>
-							<h5>Goal $90,000</h5>
-						</DonationAmount>
-					</Donation>
+					{
+						donationTotal?.targetAmount ? (
+							<Donation>
+								<ProgressBox>
+									<ProgressBar>
+										<ProgressFilled percentage={donationTotal?.percentage}>
+											<ProgressNumber>{donationTotal?.percentage}%</ProgressNumber>
+										</ProgressFilled>
+									</ProgressBar>
+								</ProgressBox>
+								<DonationAmount>
+									<h5>Raised ${donationTotal?.currentAmount}</h5>
+									<h5>Goal ${donationTotal?.targetAmount}</h5>
+								</DonationAmount>
+							</Donation>
+						) : ("")
+					}
 				</CampaignContext>
 				<Info>
 					<Title>{groupData?.chatName}</Title>
@@ -121,7 +126,7 @@ const ProgressFilled = styled.div`
     background-color: #965995;
     transition: all 1500ms linear;
     border-radius: 10px;
-    width: 90%;
+    width: ${props => props.percentage}%;
     z-index: 1;	
 
 	&::after {
