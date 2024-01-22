@@ -27,8 +27,7 @@ const BannerContainer = () => {
     setDonationTotal({
       targetAmount,
       currentAmount,
-      percentage,
-      _id: res._id
+      percentage
     })
   }
 
