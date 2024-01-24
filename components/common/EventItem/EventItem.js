@@ -114,6 +114,11 @@ const Wrapper = styled.div`
 			border-top: 1px solid #D7D3CB;
 		}
 	}
+	
+	@media (max-width: 768px) {
+		max-width: 510px;
+		margin: 0 auto;
+	}
 `;
 
 const EventContext = styled.div`

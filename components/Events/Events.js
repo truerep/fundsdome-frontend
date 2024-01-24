@@ -22,6 +22,14 @@ const EventsWrapper = styled(Container)`
 	grid-template-columns: repeat(2, 1fr);
 	gap: 30px;
 	padding: 70px 0;
+
+	@media (max-width: 1200px) {
+		padding: 70px 20px;
+	}
+
+	@media (max-width: 768px) {
+		grid-template-columns: repeat(1, 1fr);
+	}
 `;
 
 export default Events

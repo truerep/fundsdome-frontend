@@ -9,6 +9,7 @@ const HeaderContainer = () => {
   const router = useRouter();
   const [isAuthenticated, setIsAuthenticated] = useState(false)
   const [showLoginModal, setShowLoginModal] = useState(false)
+  const [toggleNav, setToggleNav] = useState(false)
 
   useEffect(() => {
       authService()
@@ -21,6 +22,8 @@ const HeaderContainer = () => {
       isAuthenticated={isAuthenticated}
       showLoginModal={showLoginModal}
       setShowLoginModal={setShowLoginModal}
+      toggleNav={toggleNav}
+      setToggleNav={setToggleNav}
     />
   )
 }

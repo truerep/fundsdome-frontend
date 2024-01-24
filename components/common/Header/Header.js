@@ -4,18 +4,22 @@ import styled from 'styled-components';
 
 import Modal from '../Modal';
 import LoginModal from '../LoginModal';
+import { appEnv } from '@/helpers';
 
 const Header = ({
     router,
     isAuthenticated,
     showLoginModal,
-    setShowLoginModal
+    setShowLoginModal,
+    toggleNav,
+    setToggleNav
 }) => {
+  const hamburgerIcon = `${appEnv.IMAGES_CDN_URL}/hamburger-dark.png`;
+
   return (
     <Wrapper>
-        {/* <Logo src="https://www.goomlandscapes.co.nz/wp-content/uploads/2018/08/logo-placeholder.png" alt="fundsdome-logo" /> */}
         <Logo src="https://ik.imagekit.io/sahildhingra/fundsdome-logo.jpeg?updatedAt=1705766654348" alt="fundsdome-logo" />
-        <Nav>
+        <Nav className={toggleNav ? 'toggled' : ''}>
             <Item>
                 <Link href="/" className={router.pathname === '/' ? 'active' : ''}>
                     Home
@@ -38,8 +42,7 @@ const Header = ({
             </Item>
             {!isAuthenticated && (
                 <Item>
-                    <a 
-                        // href="https://app.fundsdome.com" 
+                    <a
                         className="btn-primary"
                         onClick={() => setShowLoginModal(true)}
                     >
@@ -47,17 +50,10 @@ const Header = ({
                     </a>
                 </Item>
             )}
-            {/* {!isAuthenticated && (
-                <Item>
-                    <Link 
-                        href="https://app.fundsdome.com" 
-                        className="btn-primary"
-                    >
-                        LogIn
-                    </Link>
-                </Item>
-            )} */}
         </Nav>
+        <NavButton onClick={() => setToggleNav(!toggleNav)}>
+            <img src={hamburgerIcon} alt="menu" />
+        </NavButton>
         <Modal
             showModal={showLoginModal}
             setShowModal={setShowLoginModal}
@@ -81,12 +77,59 @@ const Wrapper = styled.div`
 
 const Logo = styled.img`
     height: 70px;
+    z-index: 9;
+
+    @media (max-width: 768px) {
+        height: 40px;
+        margin: 10px 0;
+    }
+`;
+
+const NavButton = styled.button`
+    border: 0;
+    background: transparent;
+    display: none;
+    z-index: 9;
+
+    img {
+        height: 22px;
+    }
+
+    @media (max-width: 768px) {
+        display: block;
+    }
 `;
 
 const Nav = styled.ul`
     list-style: none;
     display: flex;
     align-items: center;
+
+    @media (max-width: 768px) {
+        display: none;
+        position: fixed;
+        flex-direction: column;
+        background: #fff;
+        height: 100vh;
+        width: 100vw;
+        top: 0;
+        right: 0;
+        z-index: 8;
+        align-items: flex-start;
+        padding-top: 60px;
+
+        a {
+            padding: 10px 20px!important;
+
+            &.btn-primary {
+                margin: 10px 20px!important;
+            }
+        }
+
+        &.toggled {
+            display: flex;
+        }
+    }
 `;
 
 const Item = styled.li`

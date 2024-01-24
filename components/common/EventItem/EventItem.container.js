@@ -24,7 +24,7 @@ const EventItemContainer = ({eventData}) => {
       targetAmount,
       currentAmount,
       percentage,
-      _id: res[0]._id
+      _id: res[0]?._id
     })
   }
 
