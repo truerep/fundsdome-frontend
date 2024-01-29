@@ -1,1 +1,201 @@
-"use strict";(()=>{var e={};e.id=167,e.ids=[167],e.modules={805:(e,t,r)=>{r.a(e,async(e,a)=>{try{r.r(t),r.d(t,{config:()=>S,default:()=>c,getServerSideProps:()=>x,getStaticPaths:()=>g,getStaticProps:()=>d,reportWebVitals:()=>P,routeModule:()=>j,unstable_getServerProps:()=>v,unstable_getServerSideProps:()=>f,unstable_getStaticParams:()=>b,unstable_getStaticPaths:()=>h,unstable_getStaticProps:()=>m});var s=r(7093),i=r(5244),o=r(1323),n=r(4003),l=r(9597),u=r(320),p=e([u]);u=(p.then?(await p)():p)[0];let c=(0,o.l)(u,"default"),d=(0,o.l)(u,"getStaticProps"),g=(0,o.l)(u,"getStaticPaths"),x=(0,o.l)(u,"getServerSideProps"),S=(0,o.l)(u,"config"),P=(0,o.l)(u,"reportWebVitals"),m=(0,o.l)(u,"unstable_getStaticProps"),h=(0,o.l)(u,"unstable_getStaticPaths"),b=(0,o.l)(u,"unstable_getStaticParams"),v=(0,o.l)(u,"unstable_getServerProps"),f=(0,o.l)(u,"unstable_getServerSideProps"),j=new s.PagesRouteModule({definition:{kind:i.x.PAGES,page:"/[organization-slug]",pathname:"/[organization-slug]",bundlePath:"",filename:""},components:{App:l.default,Document:n.default},userland:u});a()}catch(e){a(e)}})},320:(e,t,r)=>{r.a(e,async(e,a)=>{try{r.r(t),r.d(t,{default:()=>d,getServerSideProps:()=>c});var s=r(997);r(6689);var i=r(968),o=r.n(i),n=r(6490),l=r(787),u=r(8532),p=e([n,u]);async function c(e){let t=e.params?.["organization-slug"];try{let e=await (0,n.MC)(t);return{props:{data:e}}}catch(e){return{props:{data:null}}}}[n,u]=p.then?(await p)():p;let d=({data:e})=>(0,s.jsxs)(s.Fragment,{children:[console.log(e,"<-- from api"),s.jsx(o(),{children:s.jsx("title",{children:"Organization Page"})}),s.jsx(u.h4,{}),(0,s.jsxs)(l.f,{data:e,children:[s.jsx(u.jL,{}),s.jsx(u.FE,{})]}),s.jsx(u.$_,{})]});a()}catch(e){a(e)}})},2785:e=>{e.exports=require("next/dist/compiled/next-server/pages.runtime.prod.js")},968:e=>{e.exports=require("next/head")},6238:e=>{e.exports=require("nextjs-toploader")},6689:e=>{e.exports=require("react")},6405:e=>{e.exports=require("react-dom")},997:e=>{e.exports=require("react/jsx-runtime")},7518:e=>{e.exports=require("styled-components")},9648:e=>{e.exports=import("axios")},1283:e=>{e.exports=import("universal-cookie")},7147:e=>{e.exports=require("fs")},1017:e=>{e.exports=require("path")},2781:e=>{e.exports=require("stream")},9796:e=>{e.exports=require("zlib")}};var t=require("../webpack-runtime.js");t.C(e);var r=e=>t(t.s=e),a=t.X(0,[859,910,563],()=>r(805));module.exports=a})();
+"use strict";
+(() => {
+var exports = {};
+exports.id = 167;
+exports.ids = [167];
+exports.modules = {
+
+/***/ 2284:
+/***/ ((module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.a(module, async (__webpack_handle_async_dependencies__, __webpack_async_result__) => { try {
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__),
+/* harmony export */   "getServerSideProps": () => (/* binding */ getServerSideProps)
+/* harmony export */ });
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(997);
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(6689);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var next_head__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(968);
+/* harmony import */ var next_head__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(next_head__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _api__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(370);
+/* harmony import */ var _context_OrganizationContext__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(9076);
+/* harmony import */ var _components__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(6959);
+var __webpack_async_dependencies__ = __webpack_handle_async_dependencies__([_api__WEBPACK_IMPORTED_MODULE_3__, _components__WEBPACK_IMPORTED_MODULE_5__]);
+([_api__WEBPACK_IMPORTED_MODULE_3__, _components__WEBPACK_IMPORTED_MODULE_5__] = __webpack_async_dependencies__.then ? (await __webpack_async_dependencies__)() : __webpack_async_dependencies__);
+
+
+
+
+
+
+const organization = ({ data  })=>{
+    return /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.Fragment, {
+        children: [
+            console.log(data, "<-- from api"),
+            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx((next_head__WEBPACK_IMPORTED_MODULE_2___default()), {
+                children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("title", {
+                    children: "Organization Page"
+                })
+            }),
+            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_components__WEBPACK_IMPORTED_MODULE_5__/* .Header */ .h4, {}),
+            /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_context_OrganizationContext__WEBPACK_IMPORTED_MODULE_4__/* .OrganizationProvider */ .f, {
+                data: data,
+                children: [
+                    /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_components__WEBPACK_IMPORTED_MODULE_5__/* .Banner */ .jL, {}),
+                    /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_components__WEBPACK_IMPORTED_MODULE_5__/* .PageWrapper */ .FE, {})
+                ]
+            }),
+            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_components__WEBPACK_IMPORTED_MODULE_5__/* .Footer */ .$_, {})
+        ]
+    });
+};
+async function getServerSideProps(context) {
+    const organizationSlug = context.params?.["organization-slug"];
+    try {
+        const res = await (0,_api__WEBPACK_IMPORTED_MODULE_3__/* .getGroupDetail */ .MC)(organizationSlug);
+        return {
+            props: {
+                data: res
+            }
+        };
+    } catch (err) {
+        return {
+            props: {
+                data: null
+            }
+        };
+    }
+}
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (organization);
+
+__webpack_async_result__();
+} catch(e) { __webpack_async_result__(e); } });
+
+/***/ }),
+
+/***/ 3280:
+/***/ ((module) => {
+
+module.exports = require("next/dist/shared/lib/app-router-context.js");
+
+/***/ }),
+
+/***/ 4964:
+/***/ ((module) => {
+
+module.exports = require("next/dist/shared/lib/router-context.js");
+
+/***/ }),
+
+/***/ 1751:
+/***/ ((module) => {
+
+module.exports = require("next/dist/shared/lib/router/utils/add-path-prefix.js");
+
+/***/ }),
+
+/***/ 3938:
+/***/ ((module) => {
+
+module.exports = require("next/dist/shared/lib/router/utils/format-url.js");
+
+/***/ }),
+
+/***/ 1109:
+/***/ ((module) => {
+
+module.exports = require("next/dist/shared/lib/router/utils/is-local-url.js");
+
+/***/ }),
+
+/***/ 8854:
+/***/ ((module) => {
+
+module.exports = require("next/dist/shared/lib/router/utils/parse-path.js");
+
+/***/ }),
+
+/***/ 3297:
+/***/ ((module) => {
+
+module.exports = require("next/dist/shared/lib/router/utils/remove-trailing-slash.js");
+
+/***/ }),
+
+/***/ 7782:
+/***/ ((module) => {
+
+module.exports = require("next/dist/shared/lib/router/utils/resolve-href.js");
+
+/***/ }),
+
+/***/ 9232:
+/***/ ((module) => {
+
+module.exports = require("next/dist/shared/lib/utils.js");
+
+/***/ }),
+
+/***/ 968:
+/***/ ((module) => {
+
+module.exports = require("next/head");
+
+/***/ }),
+
+/***/ 1853:
+/***/ ((module) => {
+
+module.exports = require("next/router");
+
+/***/ }),
+
+/***/ 6689:
+/***/ ((module) => {
+
+module.exports = require("react");
+
+/***/ }),
+
+/***/ 997:
+/***/ ((module) => {
+
+module.exports = require("react/jsx-runtime");
+
+/***/ }),
+
+/***/ 7518:
+/***/ ((module) => {
+
+module.exports = require("styled-components");
+
+/***/ }),
+
+/***/ 9648:
+/***/ ((module) => {
+
+module.exports = import("axios");;
+
+/***/ }),
+
+/***/ 1283:
+/***/ ((module) => {
+
+module.exports = import("universal-cookie");;
+
+/***/ })
+
+};
+;
+
+// load runtime
+var __webpack_require__ = require("../webpack-runtime.js");
+__webpack_require__.C(exports);
+var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
+var __webpack_exports__ = __webpack_require__.X(0, [664,942], () => (__webpack_exec__(2284)));
+module.exports = __webpack_exports__;
+
+})();

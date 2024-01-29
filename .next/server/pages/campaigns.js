@@ -1,1 +1,193 @@
-"use strict";(()=>{var e={};e.id=164,e.ids=[164],e.modules={1707:(e,t,r)=>{r.a(e,async(e,a)=>{try{r.r(t),r.d(t,{config:()=>S,default:()=>c,getServerSideProps:()=>x,getStaticPaths:()=>g,getStaticProps:()=>d,reportWebVitals:()=>m,routeModule:()=>f,unstable_getServerProps:()=>v,unstable_getServerSideProps:()=>q,unstable_getStaticParams:()=>b,unstable_getStaticPaths:()=>h,unstable_getStaticProps:()=>P});var s=r(7093),i=r(5244),o=r(1323),n=r(4003),l=r(9597),p=r(7006),u=e([p]);p=(u.then?(await u)():u)[0];let c=(0,o.l)(p,"default"),d=(0,o.l)(p,"getStaticProps"),g=(0,o.l)(p,"getStaticPaths"),x=(0,o.l)(p,"getServerSideProps"),S=(0,o.l)(p,"config"),m=(0,o.l)(p,"reportWebVitals"),P=(0,o.l)(p,"unstable_getStaticProps"),h=(0,o.l)(p,"unstable_getStaticPaths"),b=(0,o.l)(p,"unstable_getStaticParams"),v=(0,o.l)(p,"unstable_getServerProps"),q=(0,o.l)(p,"unstable_getServerSideProps"),f=new s.PagesRouteModule({definition:{kind:i.x.PAGES,page:"/campaigns",pathname:"/campaigns",bundlePath:"",filename:""},components:{App:l.default,Document:n.default},userland:p});a()}catch(e){a(e)}})},7006:(e,t,r)=>{r.a(e,async(e,a)=>{try{r.r(t),r.d(t,{default:()=>c,getServerSideProps:()=>u});var s=r(997);r(6689);var i=r(968),o=r.n(i),n=r(8532),l=r(6490),p=e([n,l]);async function u(){try{let e=await (0,l.Fb)();return{props:{data:e}}}catch(e){return{props:{data:null}}}}[n,l]=p.then?(await p)():p;let c=({data:e})=>(0,s.jsxs)(s.Fragment,{children:[s.jsx(o(),{children:s.jsx("title",{children:"Campaigns | FundsDome"})}),s.jsx(n.h4,{}),s.jsx(n.iP,{groupsList:e}),s.jsx(n.$_,{})]});a()}catch(e){a(e)}})},2785:e=>{e.exports=require("next/dist/compiled/next-server/pages.runtime.prod.js")},968:e=>{e.exports=require("next/head")},6238:e=>{e.exports=require("nextjs-toploader")},6689:e=>{e.exports=require("react")},6405:e=>{e.exports=require("react-dom")},997:e=>{e.exports=require("react/jsx-runtime")},7518:e=>{e.exports=require("styled-components")},9648:e=>{e.exports=import("axios")},1283:e=>{e.exports=import("universal-cookie")},7147:e=>{e.exports=require("fs")},1017:e=>{e.exports=require("path")},2781:e=>{e.exports=require("stream")},9796:e=>{e.exports=require("zlib")}};var t=require("../webpack-runtime.js");t.C(e);var r=e=>t(t.s=e),a=t.X(0,[859,910,563],()=>r(1707));module.exports=a})();
+"use strict";
+(() => {
+var exports = {};
+exports.id = 164;
+exports.ids = [164];
+exports.modules = {
+
+/***/ 2716:
+/***/ ((module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.a(module, async (__webpack_handle_async_dependencies__, __webpack_async_result__) => { try {
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__),
+/* harmony export */   "getServerSideProps": () => (/* binding */ getServerSideProps)
+/* harmony export */ });
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(997);
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(6689);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var next_head__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(968);
+/* harmony import */ var next_head__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(next_head__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _components__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(6959);
+/* harmony import */ var _api__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(370);
+var __webpack_async_dependencies__ = __webpack_handle_async_dependencies__([_components__WEBPACK_IMPORTED_MODULE_3__, _api__WEBPACK_IMPORTED_MODULE_4__]);
+([_components__WEBPACK_IMPORTED_MODULE_3__, _api__WEBPACK_IMPORTED_MODULE_4__] = __webpack_async_dependencies__.then ? (await __webpack_async_dependencies__)() : __webpack_async_dependencies__);
+
+
+
+
+
+const campaigns = ({ data  })=>{
+    return /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.Fragment, {
+        children: [
+            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx((next_head__WEBPACK_IMPORTED_MODULE_2___default()), {
+                children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("title", {
+                    children: "Campaigns | FundsDome"
+                })
+            }),
+            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_components__WEBPACK_IMPORTED_MODULE_3__/* .Header */ .h4, {}),
+            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_components__WEBPACK_IMPORTED_MODULE_3__/* .Campaigns */ .iP, {
+                groupsList: data
+            }),
+            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_components__WEBPACK_IMPORTED_MODULE_3__/* .Footer */ .$_, {})
+        ]
+    });
+};
+async function getServerSideProps() {
+    try {
+        const res = await (0,_api__WEBPACK_IMPORTED_MODULE_4__/* .getAllGroups */ .Fb)();
+        return {
+            props: {
+                data: res
+            }
+        };
+    } catch (err) {
+        return {
+            props: {
+                data: null
+            }
+        };
+    }
+}
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (campaigns);
+
+__webpack_async_result__();
+} catch(e) { __webpack_async_result__(e); } });
+
+/***/ }),
+
+/***/ 3280:
+/***/ ((module) => {
+
+module.exports = require("next/dist/shared/lib/app-router-context.js");
+
+/***/ }),
+
+/***/ 4964:
+/***/ ((module) => {
+
+module.exports = require("next/dist/shared/lib/router-context.js");
+
+/***/ }),
+
+/***/ 1751:
+/***/ ((module) => {
+
+module.exports = require("next/dist/shared/lib/router/utils/add-path-prefix.js");
+
+/***/ }),
+
+/***/ 3938:
+/***/ ((module) => {
+
+module.exports = require("next/dist/shared/lib/router/utils/format-url.js");
+
+/***/ }),
+
+/***/ 1109:
+/***/ ((module) => {
+
+module.exports = require("next/dist/shared/lib/router/utils/is-local-url.js");
+
+/***/ }),
+
+/***/ 8854:
+/***/ ((module) => {
+
+module.exports = require("next/dist/shared/lib/router/utils/parse-path.js");
+
+/***/ }),
+
+/***/ 3297:
+/***/ ((module) => {
+
+module.exports = require("next/dist/shared/lib/router/utils/remove-trailing-slash.js");
+
+/***/ }),
+
+/***/ 7782:
+/***/ ((module) => {
+
+module.exports = require("next/dist/shared/lib/router/utils/resolve-href.js");
+
+/***/ }),
+
+/***/ 9232:
+/***/ ((module) => {
+
+module.exports = require("next/dist/shared/lib/utils.js");
+
+/***/ }),
+
+/***/ 968:
+/***/ ((module) => {
+
+module.exports = require("next/head");
+
+/***/ }),
+
+/***/ 1853:
+/***/ ((module) => {
+
+module.exports = require("next/router");
+
+/***/ }),
+
+/***/ 6689:
+/***/ ((module) => {
+
+module.exports = require("react");
+
+/***/ }),
+
+/***/ 997:
+/***/ ((module) => {
+
+module.exports = require("react/jsx-runtime");
+
+/***/ }),
+
+/***/ 7518:
+/***/ ((module) => {
+
+module.exports = require("styled-components");
+
+/***/ }),
+
+/***/ 9648:
+/***/ ((module) => {
+
+module.exports = import("axios");;
+
+/***/ }),
+
+/***/ 1283:
+/***/ ((module) => {
+
+module.exports = import("universal-cookie");;
+
+/***/ })
+
+};
+;
+
+// load runtime
+var __webpack_require__ = require("../webpack-runtime.js");
+__webpack_require__.C(exports);
+var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
+var __webpack_exports__ = __webpack_require__.X(0, [664,942], () => (__webpack_exec__(2716)));
+module.exports = __webpack_exports__;
+
+})();
