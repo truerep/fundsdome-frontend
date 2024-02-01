@@ -35,11 +35,13 @@ const Header = ({
                     Events
                 </Link>
             </Item>
-            <Item>
-                <Link href="https://app.fundsdome.com/video-chat" className="btn-primary btn-outlined">
-                    Dashboard
-                </Link>
-            </Item>
+            {isAuthenticated && (
+                <Item>
+                    <Link href="https://app.fundsdome.com/video-chat" className="btn-primary btn-outlined">
+                        Dashboard
+                    </Link>
+                </Item>
+            )}
             {!isAuthenticated && (
                 <Item>
                     <a

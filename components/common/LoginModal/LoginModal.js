@@ -12,7 +12,7 @@ const LoginModal = ({
     <LoginWrapper>
         <LoginOptions>
             <button className="btn-primary">Log In</button>
-            <button className="btn-primary inactive">Sign Up</button>
+            <a href="http://app.fundsdome.com" className="btn-primary inactive">Sign Up</a>
         </LoginOptions>
         <input
         type="text"
@@ -56,11 +56,15 @@ const LoginOptions = styled.div`
     flex: 1;
     border-radius: 5px; 
 
-    &.inactive {
+    
+  }
+  .inactive {
+    flex: 1;
         background-color: transparent;
         color: #000;
+        border-radius: 5px; 
+        text-align: center;
     }
-  }
 `;
 
 export default LoginModal

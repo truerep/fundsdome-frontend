@@ -2916,7 +2916,7 @@ const Header = ({ router , isAuthenticated , showLoginModal , setShowLoginModal 
                             children: "Events"
                         })
                     }),
-                    /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(Item, {
+                    isAuthenticated && /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(Item, {
                         children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx((next_link__WEBPACK_IMPORTED_MODULE_2___default()), {
                             href: "https://app.fundsdome.com/video-chat",
                             className: "btn-primary btn-outlined",
@@ -2951,7 +2951,7 @@ const Header = ({ router , isAuthenticated , showLoginModal , setShowLoginModal 
     });
 };
 const Wrapper = styled_components__WEBPACK_IMPORTED_MODULE_3___default().div.withConfig({
-    componentId: "sc-da2c06ed-0"
+    componentId: "sc-c7dbc5db-0"
 })`
     padding: 0 20px;
     box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
@@ -2960,7 +2960,7 @@ const Wrapper = styled_components__WEBPACK_IMPORTED_MODULE_3___default().div.wit
     justify-content: space-between;
 `;
 const Logo = styled_components__WEBPACK_IMPORTED_MODULE_3___default().img.withConfig({
-    componentId: "sc-da2c06ed-1"
+    componentId: "sc-c7dbc5db-1"
 })`
     height: 70px;
     z-index: 9;
@@ -2971,7 +2971,7 @@ const Logo = styled_components__WEBPACK_IMPORTED_MODULE_3___default().img.withCo
     }
 `;
 const NavButton = styled_components__WEBPACK_IMPORTED_MODULE_3___default().button.withConfig({
-    componentId: "sc-da2c06ed-2"
+    componentId: "sc-c7dbc5db-2"
 })`
     border: 0;
     background: transparent;
@@ -2987,7 +2987,7 @@ const NavButton = styled_components__WEBPACK_IMPORTED_MODULE_3___default().butto
     }
 `;
 const Nav = styled_components__WEBPACK_IMPORTED_MODULE_3___default().ul.withConfig({
-    componentId: "sc-da2c06ed-3"
+    componentId: "sc-c7dbc5db-3"
 })`
     list-style: none;
     display: flex;
@@ -3020,7 +3020,7 @@ const Nav = styled_components__WEBPACK_IMPORTED_MODULE_3___default().ul.withConf
     }
 `;
 const Item = styled_components__WEBPACK_IMPORTED_MODULE_3___default().li.withConfig({
-    componentId: "sc-da2c06ed-4"
+    componentId: "sc-c7dbc5db-4"
 })`
     a {
         display: block;
@@ -3182,7 +3182,8 @@ const LoginModal = ({ username , setUsername , password , setPassword , handleLo
                         className: "btn-primary",
                         children: "Log In"
                     }),
-                    /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("button", {
+                    /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("a", {
+                        href: "http://app.fundsdome.com",
                         className: "btn-primary inactive",
                         children: "Sign Up"
                     })
@@ -3209,7 +3210,7 @@ const LoginModal = ({ username , setUsername , password , setPassword , handleLo
     });
 };
 const LoginWrapper = styled_components__WEBPACK_IMPORTED_MODULE_2___default().div.withConfig({
-    componentId: "sc-d9b51c70-0"
+    componentId: "sc-2c97a582-0"
 })`
   display: flex;
   flex-direction: column;
@@ -3227,7 +3228,7 @@ const LoginWrapper = styled_components__WEBPACK_IMPORTED_MODULE_2___default().di
   }
 `;
 const LoginOptions = styled_components__WEBPACK_IMPORTED_MODULE_2___default().div.withConfig({
-    componentId: "sc-d9b51c70-1"
+    componentId: "sc-2c97a582-1"
 })`
   display: flex;
   align-items: center;
@@ -3236,11 +3237,15 @@ const LoginOptions = styled_components__WEBPACK_IMPORTED_MODULE_2___default().di
     flex: 1;
     border-radius: 5px; 
 
-    &.inactive {
+    
+  }
+  .inactive {
+    flex: 1;
         background-color: transparent;
         color: #000;
+        border-radius: 5px; 
+        text-align: center;
     }
-  }
 `;
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (LoginModal);
 

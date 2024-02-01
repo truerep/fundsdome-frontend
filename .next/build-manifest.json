@@ -5,8 +5,8 @@
   "devFiles": [],
   "ampDevFiles": [],
   "lowPriorityFiles": [
-    "static/06V21Ah1m4wIAIvVzV2GV/_buildManifest.js",
-    "static/06V21Ah1m4wIAIvVzV2GV/_ssgManifest.js"
+    "static/73QHf2NHFPE-0b99D9gU-/_buildManifest.js",
+    "static/73QHf2NHFPE-0b99D9gU-/_ssgManifest.js"
   ],
   "rootMainFiles": [],
   "pages": {
@@ -23,7 +23,7 @@
       "static/chunks/main-b1241a9a70bb7dcd.js",
       "static/chunks/969-189ba6290ecab056.js",
       "static/chunks/871-b812d8820d4edac2.js",
-      "static/chunks/473-75d132dae04f9104.js",
+      "static/chunks/473-5ce4841fe742c780.js",
       "static/chunks/pages/[organization-slug]-013054110dc3a786.js"
     ],
     "/_app": [
@@ -45,7 +45,7 @@
       "static/chunks/main-b1241a9a70bb7dcd.js",
       "static/chunks/969-189ba6290ecab056.js",
       "static/chunks/871-b812d8820d4edac2.js",
-      "static/chunks/473-75d132dae04f9104.js",
+      "static/chunks/473-5ce4841fe742c780.js",
       "static/chunks/pages/campaigns-1bc12dda05c80685.js"
     ],
     "/events": [
@@ -54,7 +54,7 @@
       "static/chunks/main-b1241a9a70bb7dcd.js",
       "static/chunks/969-189ba6290ecab056.js",
       "static/chunks/871-b812d8820d4edac2.js",
-      "static/chunks/473-75d132dae04f9104.js",
+      "static/chunks/473-5ce4841fe742c780.js",
       "static/chunks/pages/events-512bb2b27ef6050c.js"
     ],
     "/login": [
@@ -63,7 +63,7 @@
       "static/chunks/main-b1241a9a70bb7dcd.js",
       "static/chunks/969-189ba6290ecab056.js",
       "static/chunks/871-b812d8820d4edac2.js",
-      "static/chunks/473-75d132dae04f9104.js",
+      "static/chunks/473-5ce4841fe742c780.js",
       "static/chunks/pages/login-608431c7f00b29a2.js"
     ]
   },
