@@ -2,7 +2,7 @@ import { loginUser } from "./authentication";
 import { getUserInfo } from "./users";
 import { getAllGroups, getGroupDetail } from "./groups";
 import { getAllEvents } from "./events";
-import { getLatestGroupPost } from "./posts";
+import { getLatestGroupPost, getAllPosts } from "./posts";
 import { getGroupDonations, getEventDonation } from "./donations";
 
 export {
@@ -12,6 +12,7 @@ export {
     getGroupDetail,
     getAllEvents,
     getLatestGroupPost,
+    getAllPosts,
     getGroupDonations,
     getEventDonation
 }

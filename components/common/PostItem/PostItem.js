@@ -14,12 +14,12 @@ const PostItem = ({organizationName, timeStamp, description, imageUrl}) => {
             </div>
         </PostHeader>
         <PostBody>
-            <p>{description}</p>
             {
                 imageUrl ? (
                     <img src={imageUrl} alt="post-image" />
                 ) : ("")
             }
+            <p>{description}</p>
         </PostBody>
         {/* <PostActions>
             <ActionItem>

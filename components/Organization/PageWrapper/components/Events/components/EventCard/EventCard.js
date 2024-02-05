@@ -31,11 +31,19 @@ const EventCardWrapper = styled.div`
     overflow: hidden;
     display: flex;
     margin-bottom: 19px;
+
+    @media (max-width: 576px) {
+        flex-direction: column;
+    }
 `;
 
 const EventImageWrapper = styled.div`
     width: 100px;
     flex-shrink: 0;
+    
+    @media (max-width: 576px) {
+        width: 100%;
+    }
 `;
 
 const EventImage = styled.img`

@@ -1,4 +1,5 @@
 import { Header, Footer, PostItem, CreatePost, CampaignItem, Modal } from "./common";
+import HomePage from "./HomePage";
 import Login from "./Login";
 import { Banner, PageWrapper } from "./Organization";
 import Campaigns from "./Campaigns";
@@ -11,6 +12,7 @@ export {
     CreatePost,
     CampaignItem,
     Modal,
+    HomePage,
     Login,
     Banner,
     PageWrapper,

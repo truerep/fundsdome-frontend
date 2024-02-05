@@ -43,6 +43,10 @@ const PostsWrapper = styled.div`
     width: 700px;
     flex-shrink: 0;
     height: fit-content;
+
+    @media (max-width: 1200px) {
+      width: 100%;
+    }
 `;
 
 export default Posts

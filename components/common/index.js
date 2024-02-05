@@ -7,6 +7,7 @@ import EventItem from "./EventItem";
 import Loader from "./Loader";
 import Modal from "./Modal";
 import LoginModal from "./LoginModal";
+import SideBar from "./SideBar";
 
 export {
     Header,
@@ -17,5 +18,6 @@ export {
     EventItem,
     Loader,
     Modal,
-    LoginModal
+    LoginModal,
+    SideBar
 }

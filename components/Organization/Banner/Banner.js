@@ -119,12 +119,23 @@ const BannerWrapper = styled(Container)`
     img {
         width: 100%;
     }
+
+    @media (max-width: 1200px) {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
 `;
 
 const OraganizationDetailsWrapper = styled.div`
     display: flex;
     align-items: center;
     padding: 26px;
+
+    @media (max-width: 1200px) {
+        flex-direction: column;
+        align-items: unset;
+        gap: 50px;
+    }
 `;
 
 const OrganizationInfoWrapper = styled.div`
@@ -138,6 +149,11 @@ const OrganizationInfoWrapper = styled.div`
         border-radius: 100%;
         flex-shrink: 0;
         margin-right: 12px;
+
+        @media (max-width: 576px) {
+            height: 55px;
+            width: 55px;
+        }
     }
 `;
 
@@ -159,6 +175,12 @@ const OrganizationContext = styled.div`
         color: #001AFF;
         text-decoration: none;
     }
+
+    @media (max-width: 576px) {
+        h1 {
+            font-size: 22px;
+        }
+    }
 `;
 
 const OrganizationActionLinks = styled.div`
@@ -167,10 +189,25 @@ const OrganizationActionLinks = styled.div`
     align-items: center;
     justify-content: flex-end;
     gap: 25px;
+
+    @media (max-width: 1200px) {
+        padding-left: 30px;
+        justify-content: unset;
+    }
+
+    @media (max-width: 576px) {
+        padding-left: 10px;
+        flex-direction: column; 
+        gap: 40px;
+    }
 `;
 
 const Donation = styled.div`
     width: 320px;
+
+    @media (max-width: 576px) {
+        width: 100%;
+    }
 `;
 
 const DonateButton = styled.a`

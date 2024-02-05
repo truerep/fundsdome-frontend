@@ -1,6 +1,7 @@
 {
   "/_app": "pages/_app.js",
   "/_document": "pages/_document.js",
+  "/about": "pages/about.html",
   "/": "pages/index.html",
   "/login": "pages/login.html",
   "/events": "pages/events.js",

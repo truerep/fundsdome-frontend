@@ -1,3 +1,4 @@
+import { HomePage } from '@/components';
 import Head from 'next/head'
 import styled from 'styled-components'
 
@@ -10,9 +11,10 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
+      {/* <HomePage /> */}
       <FrameWrapper>
-        <iframe src="https://truerep.github.io/fundsdome-ui" width="100%" height="100%" frameborder="0"></iframe>
-      </FrameWrapper>
+            <iframe src="https://truerep.github.io/fundsdome-ui" width="100%" height="100%" frameborder="0"></iframe>
+          </FrameWrapper>
     </>
   )
 }

@@ -17,6 +17,12 @@ const PageContainer = styled(Container)`
     display: flex;
     gap: 55px;
     margin-bottom: 60px;
+
+    @media (max-width: 1200px) {
+      margin: 0 20px 60px;
+      flex-direction: column;
+      gap: 30px;
+    }
 `;
 
 export default PageWrapper

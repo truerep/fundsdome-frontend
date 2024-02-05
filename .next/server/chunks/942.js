@@ -30,7 +30,7 @@ __webpack_require__.a(module, async (__webpack_handle_async_dependencies__, __we
 /* harmony export */ });
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(9648);
 /* harmony import */ var universal_cookie__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(1283);
-/* harmony import */ var _helpers__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(7736);
+/* harmony import */ var _helpers__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(8132);
 var __webpack_async_dependencies__ = __webpack_handle_async_dependencies__([axios__WEBPACK_IMPORTED_MODULE_0__, universal_cookie__WEBPACK_IMPORTED_MODULE_1__]);
 ([axios__WEBPACK_IMPORTED_MODULE_0__, universal_cookie__WEBPACK_IMPORTED_MODULE_1__] = __webpack_async_dependencies__.then ? (await __webpack_async_dependencies__)() : __webpack_async_dependencies__);
 
@@ -79,7 +79,7 @@ __webpack_require__.a(module, async (__webpack_handle_async_dependencies__, __we
 /* harmony export */   "Z": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(9648);
-/* harmony import */ var _helpers__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(7736);
+/* harmony import */ var _helpers__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(8132);
 var __webpack_async_dependencies__ = __webpack_handle_async_dependencies__([axios__WEBPACK_IMPORTED_MODULE_0__]);
 axios__WEBPACK_IMPORTED_MODULE_0__ = (__webpack_async_dependencies__.then ? (await __webpack_async_dependencies__)() : __webpack_async_dependencies__)[0];
 
@@ -108,7 +108,7 @@ __webpack_require__.a(module, async (__webpack_handle_async_dependencies__, __we
 /* harmony export */   "Z": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(9648);
-/* harmony import */ var _helpers__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(7736);
+/* harmony import */ var _helpers__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(8132);
 var __webpack_async_dependencies__ = __webpack_handle_async_dependencies__([axios__WEBPACK_IMPORTED_MODULE_0__]);
 axios__WEBPACK_IMPORTED_MODULE_0__ = (__webpack_async_dependencies__.then ? (await __webpack_async_dependencies__)() : __webpack_async_dependencies__)[0];
 
@@ -158,7 +158,7 @@ __webpack_require__.a(module, async (__webpack_handle_async_dependencies__, __we
 /* harmony export */   "Z": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(9648);
-/* harmony import */ var _helpers__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(7736);
+/* harmony import */ var _helpers__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(8132);
 var __webpack_async_dependencies__ = __webpack_handle_async_dependencies__([axios__WEBPACK_IMPORTED_MODULE_0__]);
 axios__WEBPACK_IMPORTED_MODULE_0__ = (__webpack_async_dependencies__.then ? (await __webpack_async_dependencies__)() : __webpack_async_dependencies__)[0];
 
@@ -205,7 +205,7 @@ __webpack_require__.a(module, async (__webpack_handle_async_dependencies__, __we
 /* harmony export */   "Z": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(9648);
-/* harmony import */ var _helpers__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(7736);
+/* harmony import */ var _helpers__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(8132);
 var __webpack_async_dependencies__ = __webpack_handle_async_dependencies__([axios__WEBPACK_IMPORTED_MODULE_0__]);
 axios__WEBPACK_IMPORTED_MODULE_0__ = (__webpack_async_dependencies__.then ? (await __webpack_async_dependencies__)() : __webpack_async_dependencies__)[0];
 
@@ -234,7 +234,7 @@ __webpack_require__.a(module, async (__webpack_handle_async_dependencies__, __we
 /* harmony export */   "Z": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(9648);
-/* harmony import */ var _helpers__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(7736);
+/* harmony import */ var _helpers__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(8132);
 var __webpack_async_dependencies__ = __webpack_handle_async_dependencies__([axios__WEBPACK_IMPORTED_MODULE_0__]);
 axios__WEBPACK_IMPORTED_MODULE_0__ = (__webpack_async_dependencies__.then ? (await __webpack_async_dependencies__)() : __webpack_async_dependencies__)[0];
 
@@ -281,6 +281,7 @@ __webpack_async_result__();
 
 __webpack_require__.a(module, async (__webpack_handle_async_dependencies__, __webpack_async_result__) => { try {
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "Bd": () => (/* reexport safe */ _posts__WEBPACK_IMPORTED_MODULE_4__.B),
 /* harmony export */   "Fb": () => (/* reexport safe */ _groups__WEBPACK_IMPORTED_MODULE_2__.F),
 /* harmony export */   "H4": () => (/* reexport safe */ _posts__WEBPACK_IMPORTED_MODULE_4__.H),
 /* harmony export */   "IP": () => (/* reexport safe */ _events__WEBPACK_IMPORTED_MODULE_3__.I),
@@ -311,6 +312,35 @@ __webpack_async_result__();
 
 /***/ }),
 
+/***/ 7050:
+/***/ ((module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.a(module, async (__webpack_handle_async_dependencies__, __webpack_async_result__) => { try {
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "Z": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(9648);
+/* harmony import */ var _helpers__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(8132);
+var __webpack_async_dependencies__ = __webpack_handle_async_dependencies__([axios__WEBPACK_IMPORTED_MODULE_0__]);
+axios__WEBPACK_IMPORTED_MODULE_0__ = (__webpack_async_dependencies__.then ? (await __webpack_async_dependencies__)() : __webpack_async_dependencies__)[0];
+
+
+const getAllPosts = async (pageNum = 1)=>{
+    try {
+        const response = await axios__WEBPACK_IMPORTED_MODULE_0__["default"].get(`${_helpers__WEBPACK_IMPORTED_MODULE_1__/* .appEnv.apiUrl */ .w.apiUrl}/posts/all/${pageNum}/5`, {});
+        return response.data;
+    } catch (error) {
+        console.error("Failed to fetch data", error);
+        throw error;
+    }
+};
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (getAllPosts);
+
+__webpack_async_result__();
+} catch(e) { __webpack_async_result__(e); } });
+
+/***/ }),
+
 /***/ 9931:
 /***/ ((module, __webpack_exports__, __webpack_require__) => {
 
@@ -319,7 +349,7 @@ __webpack_require__.a(module, async (__webpack_handle_async_dependencies__, __we
 /* harmony export */   "Z": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(9648);
-/* harmony import */ var _helpers__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(7736);
+/* harmony import */ var _helpers__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(8132);
 var __webpack_async_dependencies__ = __webpack_handle_async_dependencies__([axios__WEBPACK_IMPORTED_MODULE_0__]);
 axios__WEBPACK_IMPORTED_MODULE_0__ = (__webpack_async_dependencies__.then ? (await __webpack_async_dependencies__)() : __webpack_async_dependencies__)[0];
 
@@ -345,11 +375,14 @@ __webpack_async_result__();
 
 __webpack_require__.a(module, async (__webpack_handle_async_dependencies__, __webpack_async_result__) => { try {
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "B": () => (/* reexport safe */ _getAllPosts__WEBPACK_IMPORTED_MODULE_1__.Z),
 /* harmony export */   "H": () => (/* reexport safe */ _getLatestGroupPost__WEBPACK_IMPORTED_MODULE_0__.Z)
 /* harmony export */ });
 /* harmony import */ var _getLatestGroupPost__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(9931);
-var __webpack_async_dependencies__ = __webpack_handle_async_dependencies__([_getLatestGroupPost__WEBPACK_IMPORTED_MODULE_0__]);
-_getLatestGroupPost__WEBPACK_IMPORTED_MODULE_0__ = (__webpack_async_dependencies__.then ? (await __webpack_async_dependencies__)() : __webpack_async_dependencies__)[0];
+/* harmony import */ var _getAllPosts__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(7050);
+var __webpack_async_dependencies__ = __webpack_handle_async_dependencies__([_getLatestGroupPost__WEBPACK_IMPORTED_MODULE_0__, _getAllPosts__WEBPACK_IMPORTED_MODULE_1__]);
+([_getLatestGroupPost__WEBPACK_IMPORTED_MODULE_0__, _getAllPosts__WEBPACK_IMPORTED_MODULE_1__] = __webpack_async_dependencies__.then ? (await __webpack_async_dependencies__)() : __webpack_async_dependencies__);
+
 
 
 
@@ -367,7 +400,7 @@ __webpack_require__.a(module, async (__webpack_handle_async_dependencies__, __we
 /* harmony export */ });
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(9648);
 /* harmony import */ var universal_cookie__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(1283);
-/* harmony import */ var _helpers__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(7736);
+/* harmony import */ var _helpers__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(8132);
 var __webpack_async_dependencies__ = __webpack_handle_async_dependencies__([axios__WEBPACK_IMPORTED_MODULE_0__, universal_cookie__WEBPACK_IMPORTED_MODULE_1__]);
 ([axios__WEBPACK_IMPORTED_MODULE_0__, universal_cookie__WEBPACK_IMPORTED_MODULE_1__] = __webpack_async_dependencies__.then ? (await __webpack_async_dependencies__)() : __webpack_async_dependencies__);
 
@@ -666,6 +699,275 @@ var __webpack_async_dependencies__ = __webpack_handle_async_dependencies__([_Eve
 _Events_container__WEBPACK_IMPORTED_MODULE_0__ = (__webpack_async_dependencies__.then ? (await __webpack_async_dependencies__)() : __webpack_async_dependencies__)[0];
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_Events_container__WEBPACK_IMPORTED_MODULE_0__/* ["default"] */ .Z);
+
+__webpack_async_result__();
+} catch(e) { __webpack_async_result__(e); } });
+
+/***/ }),
+
+/***/ 1610:
+/***/ ((module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.a(module, async (__webpack_handle_async_dependencies__, __webpack_async_result__) => { try {
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "Z": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(997);
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(6689);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _HomePage__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(5664);
+var __webpack_async_dependencies__ = __webpack_handle_async_dependencies__([_HomePage__WEBPACK_IMPORTED_MODULE_2__]);
+_HomePage__WEBPACK_IMPORTED_MODULE_2__ = (__webpack_async_dependencies__.then ? (await __webpack_async_dependencies__)() : __webpack_async_dependencies__)[0];
+
+
+
+const HomePageContainer = ()=>{
+    return /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_HomePage__WEBPACK_IMPORTED_MODULE_2__/* ["default"] */ .Z, {});
+};
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (HomePageContainer);
+
+__webpack_async_result__();
+} catch(e) { __webpack_async_result__(e); } });
+
+/***/ }),
+
+/***/ 5664:
+/***/ ((module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.a(module, async (__webpack_handle_async_dependencies__, __webpack_async_result__) => { try {
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "Z": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(997);
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(6689);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _common__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(1025);
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(7518);
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(styled_components__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _components__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(8757);
+var __webpack_async_dependencies__ = __webpack_handle_async_dependencies__([_common__WEBPACK_IMPORTED_MODULE_2__, _components__WEBPACK_IMPORTED_MODULE_4__]);
+([_common__WEBPACK_IMPORTED_MODULE_2__, _components__WEBPACK_IMPORTED_MODULE_4__] = __webpack_async_dependencies__.then ? (await __webpack_async_dependencies__)() : __webpack_async_dependencies__);
+
+
+
+
+
+const HomePage = ()=>{
+    return /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.Fragment, {
+        children: /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(HomePageWrapper, {
+            children: [
+                /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_common__WEBPACK_IMPORTED_MODULE_2__/* .SideBar */ .Ke, {}),
+                /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(Content, {
+                    children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_components__WEBPACK_IMPORTED_MODULE_4__/* .Posts */ .V, {})
+                }),
+                /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("p", {
+                    children: "Suggested Campaigns"
+                })
+            ]
+        })
+    });
+};
+const HomePageWrapper = styled_components__WEBPACK_IMPORTED_MODULE_3___default().div.withConfig({
+    componentId: "sc-e4d6c3ed-0"
+})`
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+`;
+const Content = styled_components__WEBPACK_IMPORTED_MODULE_3___default().div.withConfig({
+    componentId: "sc-e4d6c3ed-1"
+})`
+    padding: 50px 0;
+`;
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (HomePage);
+
+__webpack_async_result__();
+} catch(e) { __webpack_async_result__(e); } });
+
+/***/ }),
+
+/***/ 1520:
+/***/ ((module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.a(module, async (__webpack_handle_async_dependencies__, __webpack_async_result__) => { try {
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "Z": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(997);
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(6689);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _Posts__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(5190);
+/* harmony import */ var _api__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(370);
+var __webpack_async_dependencies__ = __webpack_handle_async_dependencies__([_Posts__WEBPACK_IMPORTED_MODULE_2__, _api__WEBPACK_IMPORTED_MODULE_3__]);
+([_Posts__WEBPACK_IMPORTED_MODULE_2__, _api__WEBPACK_IMPORTED_MODULE_3__] = __webpack_async_dependencies__.then ? (await __webpack_async_dependencies__)() : __webpack_async_dependencies__);
+
+
+
+
+let allPostsList = [];
+const PostsContainer = ()=>{
+    const [allNewPostsList, setAllNewPostsList] = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)([]);
+    const sectionRef = (0,react__WEBPACK_IMPORTED_MODULE_1__.useRef)(null);
+    const [isLoading, setIsLoading] = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)(false);
+    let postsList = {};
+    const fetchInitialPosts = async ()=>{
+        let res = await (0,_api__WEBPACK_IMPORTED_MODULE_3__/* .getAllPosts */ .Bd)(1);
+        postsList = res;
+        postsList?.posts.forEach((newObj)=>{
+            if (!allPostsList.some((existingObj)=>existingObj._id === newObj._id)) {
+                allPostsList.push(newObj);
+            }
+        });
+        setAllNewPostsList(allPostsList);
+    };
+    (0,react__WEBPACK_IMPORTED_MODULE_1__.useEffect)(()=>{
+        fetchInitialPosts();
+    }, []);
+    // postsList?.groups.forEach(newObj => {
+    //     if (!allPostsList.some(existingObj => existingObj._id === newObj._id)) {
+    //       allPostsList.push(newObj);
+    //     }
+    //   });
+    const isSectionVisible = ()=>{
+        if (sectionRef.current) {
+            const rect = sectionRef.current.getBoundingClientRect();
+            return rect.bottom <= window.innerHeight;
+        }
+        return false;
+    };
+    const handleScroll = async ()=>{
+        if (isSectionVisible()) {
+            if (postsList?.currentPage !== postsList?.totalPages) {
+                setIsLoading(true);
+                let res = await (0,_api__WEBPACK_IMPORTED_MODULE_3__/* .getAllPosts */ .Bd)(postsList?.currentPage + 1);
+                postsList = res;
+                postsList?.posts.forEach((newObj)=>{
+                    if (!allPostsList.some((existingObj)=>existingObj._id === newObj._id)) {
+                        allPostsList.push(newObj);
+                    }
+                });
+                setIsLoading(false);
+            }
+        }
+    };
+    (0,react__WEBPACK_IMPORTED_MODULE_1__.useEffect)(()=>{
+        window.addEventListener("scroll", handleScroll);
+        return ()=>{
+            window.removeEventListener("scroll", handleScroll);
+        };
+    }, []);
+    return /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_Posts__WEBPACK_IMPORTED_MODULE_2__/* ["default"] */ .Z, {
+        sectionRef: sectionRef,
+        isLoading: isLoading,
+        postsList: allPostsList
+    });
+};
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (PostsContainer);
+
+__webpack_async_result__();
+} catch(e) { __webpack_async_result__(e); } });
+
+/***/ }),
+
+/***/ 5190:
+/***/ ((module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.a(module, async (__webpack_handle_async_dependencies__, __webpack_async_result__) => { try {
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "Z": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(997);
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _components_common__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(1025);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(6689);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(7518);
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(styled_components__WEBPACK_IMPORTED_MODULE_3__);
+var __webpack_async_dependencies__ = __webpack_handle_async_dependencies__([_components_common__WEBPACK_IMPORTED_MODULE_1__]);
+_components_common__WEBPACK_IMPORTED_MODULE_1__ = (__webpack_async_dependencies__.then ? (await __webpack_async_dependencies__)() : __webpack_async_dependencies__)[0];
+
+
+
+
+const Posts = ({ sectionRef , postsList , isLoading  })=>{
+    return /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(Wrapper, {
+        ref: sectionRef,
+        children: [
+            console.log(postsList, "<---postsList"),
+            postsList.length && postsList.map((postItem)=>/*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_components_common__WEBPACK_IMPORTED_MODULE_1__/* .PostItem */ .YS, {
+                    organizationName: postItem?.title,
+                    timeStamp: postItem?.createdAt,
+                    description: postItem?.description,
+                    imageUrl: postItem?.image
+                }, postItem?._id)),
+            isLoading ? /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_components_common__WEBPACK_IMPORTED_MODULE_1__/* .Loader */ .aN, {}) : ""
+        ]
+    });
+};
+const Wrapper = styled_components__WEBPACK_IMPORTED_MODULE_3___default().div.withConfig({
+    componentId: "sc-fad9d4d8-0"
+})`
+  height: 200vh;
+  width: 560px;
+`;
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Posts);
+
+__webpack_async_result__();
+} catch(e) { __webpack_async_result__(e); } });
+
+/***/ }),
+
+/***/ 6032:
+/***/ ((module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.a(module, async (__webpack_handle_async_dependencies__, __webpack_async_result__) => { try {
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "Z": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _Posts_container__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(1520);
+var __webpack_async_dependencies__ = __webpack_handle_async_dependencies__([_Posts_container__WEBPACK_IMPORTED_MODULE_0__]);
+_Posts_container__WEBPACK_IMPORTED_MODULE_0__ = (__webpack_async_dependencies__.then ? (await __webpack_async_dependencies__)() : __webpack_async_dependencies__)[0];
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_Posts_container__WEBPACK_IMPORTED_MODULE_0__/* ["default"] */ .Z);
+
+__webpack_async_result__();
+} catch(e) { __webpack_async_result__(e); } });
+
+/***/ }),
+
+/***/ 8757:
+/***/ ((module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.a(module, async (__webpack_handle_async_dependencies__, __webpack_async_result__) => { try {
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "V": () => (/* reexport safe */ _Posts__WEBPACK_IMPORTED_MODULE_0__.Z)
+/* harmony export */ });
+/* harmony import */ var _Posts__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(6032);
+var __webpack_async_dependencies__ = __webpack_handle_async_dependencies__([_Posts__WEBPACK_IMPORTED_MODULE_0__]);
+_Posts__WEBPACK_IMPORTED_MODULE_0__ = (__webpack_async_dependencies__.then ? (await __webpack_async_dependencies__)() : __webpack_async_dependencies__)[0];
+
+
+
+__webpack_async_result__();
+} catch(e) { __webpack_async_result__(e); } });
+
+/***/ }),
+
+/***/ 2772:
+/***/ ((module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.a(module, async (__webpack_handle_async_dependencies__, __webpack_async_result__) => { try {
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "Z": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _HomePage_container__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(1610);
+var __webpack_async_dependencies__ = __webpack_handle_async_dependencies__([_HomePage_container__WEBPACK_IMPORTED_MODULE_0__]);
+_HomePage_container__WEBPACK_IMPORTED_MODULE_0__ = (__webpack_async_dependencies__.then ? (await __webpack_async_dependencies__)() : __webpack_async_dependencies__)[0];
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_HomePage_container__WEBPACK_IMPORTED_MODULE_0__/* ["default"] */ .Z);
 
 __webpack_async_result__();
 } catch(e) { __webpack_async_result__(e); } });
@@ -1053,7 +1355,7 @@ const Banner = ({ donationTotal , organizationData , donations , donationId , se
     });
 };
 const BannerWrapper = styled_components__WEBPACK_IMPORTED_MODULE_2___default()(_components_common_UiElements__WEBPACK_IMPORTED_MODULE_3__/* .Container */ .W).withConfig({
-    componentId: "sc-34b298d5-0"
+    componentId: "sc-b579ec82-0"
 })`
     border-radius: 10px;
     background: #FFF;
@@ -1064,16 +1366,27 @@ const BannerWrapper = styled_components__WEBPACK_IMPORTED_MODULE_2___default()(_
     img {
         width: 100%;
     }
+
+    @media (max-width: 1200px) {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
 `;
 const OraganizationDetailsWrapper = styled_components__WEBPACK_IMPORTED_MODULE_2___default().div.withConfig({
-    componentId: "sc-34b298d5-1"
+    componentId: "sc-b579ec82-1"
 })`
     display: flex;
     align-items: center;
     padding: 26px;
+
+    @media (max-width: 1200px) {
+        flex-direction: column;
+        align-items: unset;
+        gap: 50px;
+    }
 `;
 const OrganizationInfoWrapper = styled_components__WEBPACK_IMPORTED_MODULE_2___default().div.withConfig({
-    componentId: "sc-34b298d5-2"
+    componentId: "sc-b579ec82-2"
 })`
     display: flex;
     align-items: center;
@@ -1085,10 +1398,15 @@ const OrganizationInfoWrapper = styled_components__WEBPACK_IMPORTED_MODULE_2___d
         border-radius: 100%;
         flex-shrink: 0;
         margin-right: 12px;
+
+        @media (max-width: 576px) {
+            height: 55px;
+            width: 55px;
+        }
     }
 `;
 const OrganizationContext = styled_components__WEBPACK_IMPORTED_MODULE_2___default().div.withConfig({
-    componentId: "sc-34b298d5-3"
+    componentId: "sc-b579ec82-3"
 })`
     h1 {
         font-family: Martel;
@@ -1107,23 +1425,44 @@ const OrganizationContext = styled_components__WEBPACK_IMPORTED_MODULE_2___defau
         color: #001AFF;
         text-decoration: none;
     }
+
+    @media (max-width: 576px) {
+        h1 {
+            font-size: 22px;
+        }
+    }
 `;
 const OrganizationActionLinks = styled_components__WEBPACK_IMPORTED_MODULE_2___default().div.withConfig({
-    componentId: "sc-34b298d5-4"
+    componentId: "sc-b579ec82-4"
 })`
     flex: 1;
     display: flex;
     align-items: center;
     justify-content: flex-end;
     gap: 25px;
+
+    @media (max-width: 1200px) {
+        padding-left: 30px;
+        justify-content: unset;
+    }
+
+    @media (max-width: 576px) {
+        padding-left: 10px;
+        flex-direction: column; 
+        gap: 40px;
+    }
 `;
 const Donation = styled_components__WEBPACK_IMPORTED_MODULE_2___default().div.withConfig({
-    componentId: "sc-34b298d5-5"
+    componentId: "sc-b579ec82-5"
 })`
     width: 320px;
+
+    @media (max-width: 576px) {
+        width: 100%;
+    }
 `;
 const DonateButton = styled_components__WEBPACK_IMPORTED_MODULE_2___default().a.withConfig({
-    componentId: "sc-34b298d5-6"
+    componentId: "sc-b579ec82-6"
 })`
     display: inline-block;
     background-color: #9F85F7;
@@ -1141,10 +1480,10 @@ const DonateButton = styled_components__WEBPACK_IMPORTED_MODULE_2___default().a.
     }
 `;
 const ProgressBox = styled_components__WEBPACK_IMPORTED_MODULE_2___default().div.withConfig({
-    componentId: "sc-34b298d5-7"
+    componentId: "sc-b579ec82-7"
 })``;
 const ProgressBar = styled_components__WEBPACK_IMPORTED_MODULE_2___default().div.withConfig({
-    componentId: "sc-34b298d5-8"
+    componentId: "sc-b579ec82-8"
 })`
 	width: 100%;
     height: 7px;
@@ -1153,7 +1492,7 @@ const ProgressBar = styled_components__WEBPACK_IMPORTED_MODULE_2___default().div
     position: relative;
 `;
 const ProgressFilled = styled_components__WEBPACK_IMPORTED_MODULE_2___default().div.withConfig({
-    componentId: "sc-34b298d5-9"
+    componentId: "sc-b579ec82-9"
 })`
 	position: relative;
     position: absolute;
@@ -1194,7 +1533,7 @@ const ProgressFilled = styled_components__WEBPACK_IMPORTED_MODULE_2___default().
 	}
 `;
 const ProgressNumber = styled_components__WEBPACK_IMPORTED_MODULE_2___default().div.withConfig({
-    componentId: "sc-34b298d5-10"
+    componentId: "sc-b579ec82-10"
 })`
 	position: absolute;
     bottom: calc(100% + 13px);
@@ -1207,7 +1546,7 @@ const ProgressNumber = styled_components__WEBPACK_IMPORTED_MODULE_2___default().
     color: var(--cleenhearts-purple, #965995)
 `;
 const DonationAmount = styled_components__WEBPACK_IMPORTED_MODULE_2___default().div.withConfig({
-    componentId: "sc-34b298d5-11"
+    componentId: "sc-b579ec82-11"
 })`
 	margin-top: 11px;
     display: flex;
@@ -1225,7 +1564,7 @@ const DonationAmount = styled_components__WEBPACK_IMPORTED_MODULE_2___default().
 	}
 `;
 const EventsWrapper = styled_components__WEBPACK_IMPORTED_MODULE_2___default().div.withConfig({
-    componentId: "sc-34b298d5-12"
+    componentId: "sc-b579ec82-12"
 })`
     background-color: #fff;
     padding: 20px;
@@ -1236,7 +1575,7 @@ const EventsWrapper = styled_components__WEBPACK_IMPORTED_MODULE_2___default().d
     }
 `;
 const EventItem = styled_components__WEBPACK_IMPORTED_MODULE_2___default().div.withConfig({
-    componentId: "sc-34b298d5-13"
+    componentId: "sc-b579ec82-13"
 })`
     display: flex;
     align-items: center;
@@ -1267,13 +1606,13 @@ const EventItem = styled_components__WEBPACK_IMPORTED_MODULE_2___default().div.w
     }
 `;
 const DonationDetail = styled_components__WEBPACK_IMPORTED_MODULE_2___default().div.withConfig({
-    componentId: "sc-34b298d5-14"
+    componentId: "sc-b579ec82-14"
 })`
     padding: 0 15px;
     flex: 1;
 `;
 const DonateBtn = styled_components__WEBPACK_IMPORTED_MODULE_2___default().button.withConfig({
-    componentId: "sc-34b298d5-15"
+    componentId: "sc-b579ec82-15"
 })`
     margin-left: auto;
     display: inline-block;
@@ -1294,7 +1633,7 @@ const DonateBtn = styled_components__WEBPACK_IMPORTED_MODULE_2___default().butto
     }
 `;
 const AmountModalWrapper = styled_components__WEBPACK_IMPORTED_MODULE_2___default().div.withConfig({
-    componentId: "sc-34b298d5-16"
+    componentId: "sc-b579ec82-16"
 })`
     background-color: #fff;
     padding: 20px;
@@ -1397,11 +1736,17 @@ const PageWrapper = ()=>{
     });
 };
 const PageContainer = styled_components__WEBPACK_IMPORTED_MODULE_2___default()(_components_common_UiElements__WEBPACK_IMPORTED_MODULE_3__/* .Container */ .W).withConfig({
-    componentId: "sc-3863826c-0"
+    componentId: "sc-35053f06-0"
 })`
     display: flex;
     gap: 55px;
     margin-bottom: 60px;
+
+    @media (max-width: 1200px) {
+      margin: 0 20px 60px;
+      flex-direction: column;
+      gap: 30px;
+    }
 `;
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (PageWrapper);
 
@@ -1496,7 +1841,7 @@ const EventCard = ({ eventName , event , thumbnail  })=>{
     });
 };
 const EventCardWrapper = external_styled_components_default().div.withConfig({
-    componentId: "sc-418fe459-0"
+    componentId: "sc-c12a5b04-0"
 })`
     border-radius: 5px;
     border: 1px solid #9F85F7;
@@ -1504,22 +1849,30 @@ const EventCardWrapper = external_styled_components_default().div.withConfig({
     overflow: hidden;
     display: flex;
     margin-bottom: 19px;
+
+    @media (max-width: 576px) {
+        flex-direction: column;
+    }
 `;
 const EventImageWrapper = external_styled_components_default().div.withConfig({
-    componentId: "sc-418fe459-1"
+    componentId: "sc-c12a5b04-1"
 })`
     width: 100px;
     flex-shrink: 0;
+    
+    @media (max-width: 576px) {
+        width: 100%;
+    }
 `;
 const EventImage = external_styled_components_default().img.withConfig({
-    componentId: "sc-418fe459-2"
+    componentId: "sc-c12a5b04-2"
 })`
     height: 100%;
     width: 100%;
     object-fit: cover;
 `;
 const EventInfo = external_styled_components_default().div.withConfig({
-    componentId: "sc-418fe459-3"
+    componentId: "sc-c12a5b04-3"
 })`
     padding: 11px 14px 13px;
     color: #7D7D7D;
@@ -1528,7 +1881,7 @@ const EventInfo = external_styled_components_default().div.withConfig({
     flex: 1;
 `;
 const EventTitle = external_styled_components_default().h3.withConfig({
-    componentId: "sc-418fe459-4"
+    componentId: "sc-c12a5b04-4"
 })`
     color: #000;
     font-size: 19px;
@@ -1536,12 +1889,12 @@ const EventTitle = external_styled_components_default().h3.withConfig({
     line-height: normal;
 `;
 const EventTiming = external_styled_components_default().p.withConfig({
-    componentId: "sc-418fe459-5"
+    componentId: "sc-c12a5b04-5"
 })`
     padding: 7px 0 9px;
 `;
 const DonationInfo = external_styled_components_default().div.withConfig({
-    componentId: "sc-418fe459-6"
+    componentId: "sc-c12a5b04-6"
 })`
     display: flex;
     align-items: center;
@@ -1549,12 +1902,12 @@ const DonationInfo = external_styled_components_default().div.withConfig({
     padding-top: 5px;
 `;
 const DonationAmount = external_styled_components_default().p.withConfig({
-    componentId: "sc-418fe459-7"
+    componentId: "sc-c12a5b04-7"
 })`
 
 `;
 const DonationContributors = external_styled_components_default().p.withConfig({
-    componentId: "sc-418fe459-8"
+    componentId: "sc-c12a5b04-8"
 })`
 
 `;
@@ -1703,7 +2056,7 @@ const Posts = ({ isAdmin , organizationData  })=>{
     });
 };
 const PostsWrapper = styled_components__WEBPACK_IMPORTED_MODULE_2___default().div.withConfig({
-    componentId: "sc-fec4f54e-0"
+    componentId: "sc-df17634c-0"
 })`
     border-radius: 10px;
     background: #FFF;
@@ -1711,6 +2064,10 @@ const PostsWrapper = styled_components__WEBPACK_IMPORTED_MODULE_2___default().di
     width: 700px;
     flex-shrink: 0;
     height: fit-content;
+
+    @media (max-width: 1200px) {
+      width: 100%;
+    }
 `;
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Posts);
 
@@ -2874,7 +3231,7 @@ __webpack_require__.a(module, async (__webpack_handle_async_dependencies__, __we
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(styled_components__WEBPACK_IMPORTED_MODULE_3__);
 /* harmony import */ var _Modal__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(2875);
 /* harmony import */ var _LoginModal__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(3870);
-/* harmony import */ var _helpers__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(7736);
+/* harmony import */ var _helpers__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(8132);
 var __webpack_async_dependencies__ = __webpack_handle_async_dependencies__([_LoginModal__WEBPACK_IMPORTED_MODULE_5__]);
 _LoginModal__WEBPACK_IMPORTED_MODULE_5__ = (__webpack_async_dependencies__.then ? (await __webpack_async_dependencies__)() : __webpack_async_dependencies__)[0];
 
@@ -3642,20 +3999,20 @@ const PostItem = ({ organizationName , timeStamp , description , imageUrl  })=>{
             }),
             /*#__PURE__*/ (0,jsx_runtime_.jsxs)(PostBody, {
                 children: [
-                    /*#__PURE__*/ jsx_runtime_.jsx("p", {
-                        children: description
-                    }),
                     imageUrl ? /*#__PURE__*/ jsx_runtime_.jsx("img", {
                         src: imageUrl,
                         alt: "post-image"
-                    }) : ""
+                    }) : "",
+                    /*#__PURE__*/ jsx_runtime_.jsx("p", {
+                        children: description
+                    })
                 ]
             })
         ]
     });
 };
 const PostContainer = external_styled_components_default().div.withConfig({
-    componentId: "sc-1ed83f4b-0"
+    componentId: "sc-c83ecf09-0"
 })`
     padding: 22px 26px;
     border-bottom: 1px solid #F5F1FC;
@@ -3665,7 +4022,7 @@ const PostContainer = external_styled_components_default().div.withConfig({
     }
 `;
 const PostHeader = external_styled_components_default().div.withConfig({
-    componentId: "sc-1ed83f4b-1"
+    componentId: "sc-c83ecf09-1"
 })`
     display: flex;
     align-items: center;
@@ -3692,7 +4049,7 @@ const PostHeader = external_styled_components_default().div.withConfig({
     }
 `;
 const PostBody = external_styled_components_default().div.withConfig({
-    componentId: "sc-1ed83f4b-2"
+    componentId: "sc-c83ecf09-2"
 })`
     p {
         margin-top: 15px;
@@ -3706,7 +4063,7 @@ const PostBody = external_styled_components_default().div.withConfig({
     }
 `;
 const PostActions = external_styled_components_default().div.withConfig({
-    componentId: "sc-1ed83f4b-3"
+    componentId: "sc-c83ecf09-3"
 })`
     display: flex;
     align-items: center;
@@ -3714,7 +4071,7 @@ const PostActions = external_styled_components_default().div.withConfig({
     padding: 5px 0;
 `;
 const ActionItem = external_styled_components_default().button.withConfig({
-    componentId: "sc-1ed83f4b-4"
+    componentId: "sc-c83ecf09-4"
 })`
     display: flex;
     align-items: center;
@@ -3733,7 +4090,7 @@ const ActionItem = external_styled_components_default().button.withConfig({
     }
 `;
 const PostComments = external_styled_components_default().div.withConfig({
-    componentId: "sc-1ed83f4b-5"
+    componentId: "sc-c83ecf09-5"
 })`
 
 `;
@@ -3756,6 +4113,172 @@ const PostItemContainer = ({ organizationName , timeStamp , description , imageU
 ;// CONCATENATED MODULE: ./components/common/PostItem/index.js
 
 /* harmony default export */ const common_PostItem = (PostItem_container);
+
+
+/***/ }),
+
+/***/ 2175:
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+
+// EXPORTS
+__webpack_require__.d(__webpack_exports__, {
+  "Z": () => (/* binding */ common_SideBar)
+});
+
+// EXTERNAL MODULE: external "react/jsx-runtime"
+var jsx_runtime_ = __webpack_require__(997);
+// EXTERNAL MODULE: external "react"
+var external_react_ = __webpack_require__(6689);
+// EXTERNAL MODULE: ./helpers/index.js + 2 modules
+var helpers = __webpack_require__(8132);
+// EXTERNAL MODULE: ./node_modules/next/link.js
+var next_link = __webpack_require__(1664);
+var link_default = /*#__PURE__*/__webpack_require__.n(next_link);
+// EXTERNAL MODULE: external "styled-components"
+var external_styled_components_ = __webpack_require__(7518);
+var external_styled_components_default = /*#__PURE__*/__webpack_require__.n(external_styled_components_);
+;// CONCATENATED MODULE: ./components/common/SideBar/SideBar.js
+
+
+
+
+
+const SideBar = ({ router , navMenu  })=>{
+    return /*#__PURE__*/ jsx_runtime_.jsx(Wrapper, {
+        children: /*#__PURE__*/ (0,jsx_runtime_.jsxs)(Content, {
+            children: [
+                /*#__PURE__*/ jsx_runtime_.jsx(Logo, {
+                    src: `${helpers/* appEnv.IMAGES_CDN_URL */.w.IMAGES_CDN_URL}/fundsdome-logo.jpeg`,
+                    alt: "fundsdome"
+                }),
+                /*#__PURE__*/ jsx_runtime_.jsx(NavMenu, {
+                    children: navMenu.length && navMenu.map((navItem, index)=>/*#__PURE__*/ jsx_runtime_.jsx(MenuItem, {
+                            children: /*#__PURE__*/ (0,jsx_runtime_.jsxs)((link_default()), {
+                                href: navItem.url,
+                                className: router.pathname === navItem.url ? "active" : "",
+                                children: [
+                                    /*#__PURE__*/ jsx_runtime_.jsx("img", {
+                                        src: navItem.icon
+                                    }),
+                                    /*#__PURE__*/ jsx_runtime_.jsx("span", {
+                                        children: navItem.title
+                                    })
+                                ]
+                            })
+                        }, index))
+                })
+            ]
+        })
+    });
+};
+const Wrapper = external_styled_components_default().div.withConfig({
+    componentId: "sc-1cce29d5-0"
+})`
+    box-shadow: 1px 0 5px 0 rgba(0,0,0,0.05);
+    height: 100vh;
+    overflow: auto;
+    position: sticky;
+    top: 0;
+`;
+const Content = external_styled_components_default().div.withConfig({
+    componentId: "sc-1cce29d5-1"
+})`
+    padding: 20px;
+`;
+const Logo = external_styled_components_default().img.withConfig({
+    componentId: "sc-1cce29d5-2"
+})`
+    height: 45px;
+    padding-right: 40px;
+    margin: 20px 0 30px;
+`;
+const NavMenu = external_styled_components_default().ul.withConfig({
+    componentId: "sc-1cce29d5-3"
+})`
+`;
+const MenuItem = external_styled_components_default().li.withConfig({
+    componentId: "sc-1cce29d5-4"
+})`
+    a {
+        display: block;
+        padding: 15px 10px;
+        color: ${helpers/* colors.ErrieBlack */.O.ErrieBlack};
+        border-radius: 5px;
+        font-weight: 500;
+        display: flex;
+        align-items: center;
+        gap: 15px;
+
+        img {
+            height: 22px;
+        }
+
+        &:not(last-child) {
+            margin-bottom: 5px;
+        }
+
+        &.active, &:hover {
+            color: ${helpers/* colors.Lavender */.O.Lavender};
+            background: rgba(159, 133, 247, 0.08);
+        }
+    }
+`;
+/* harmony default export */ const SideBar_SideBar = (SideBar);
+
+// EXTERNAL MODULE: external "next/router"
+var router_ = __webpack_require__(1853);
+;// CONCATENATED MODULE: ./components/common/SideBar/SideBar.container.js
+
+
+
+
+
+const SideBarContainer = ()=>{
+    const router = (0,router_.useRouter)();
+    const ImageCdn = helpers/* appEnv.IMAGES_CDN_URL */.w.IMAGES_CDN_URL;
+    const navMenu = [
+        {
+            title: "Home",
+            url: "/",
+            icon: `${ImageCdn}/explore.png`
+        },
+        {
+            title: "Explore",
+            url: "/explore",
+            icon: `${ImageCdn}/explore.png`
+        },
+        {
+            title: "Events",
+            url: "/events",
+            icon: `${ImageCdn}/explore.png`
+        },
+        {
+            title: "Campaigns",
+            url: "/campaigns",
+            icon: `${ImageCdn}/explore.png`
+        },
+        {
+            title: "Messages",
+            url: "http://app.fundsdome.com/video-chat",
+            icon: `${ImageCdn}/explore.png`
+        },
+        {
+            title: "About",
+            url: "/about",
+            icon: `${ImageCdn}/explore.png`
+        }
+    ];
+    return /*#__PURE__*/ jsx_runtime_.jsx(SideBar_SideBar, {
+        router: router,
+        navMenu: navMenu
+    });
+};
+/* harmony default export */ const SideBar_container = (SideBarContainer);
+
+;// CONCATENATED MODULE: ./components/common/SideBar/index.js
+
+/* harmony default export */ const common_SideBar = (SideBar_container);
 
 
 /***/ }),
@@ -3786,6 +4309,7 @@ const Container = styled_components__WEBPACK_IMPORTED_MODULE_0___default().div.w
 __webpack_require__.a(module, async (__webpack_handle_async_dependencies__, __webpack_async_result__) => { try {
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "$_": () => (/* reexport safe */ _Footer__WEBPACK_IMPORTED_MODULE_1__.Z),
+/* harmony export */   "Ke": () => (/* reexport safe */ _SideBar__WEBPACK_IMPORTED_MODULE_9__.Z),
 /* harmony export */   "YS": () => (/* reexport safe */ _PostItem__WEBPACK_IMPORTED_MODULE_2__.Z),
 /* harmony export */   "_A": () => (/* reexport safe */ _LoginModal__WEBPACK_IMPORTED_MODULE_8__.Z),
 /* harmony export */   "aN": () => (/* reexport safe */ _Loader__WEBPACK_IMPORTED_MODULE_6__.Z),
@@ -3803,8 +4327,10 @@ __webpack_require__.a(module, async (__webpack_handle_async_dependencies__, __we
 /* harmony import */ var _Loader__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(4435);
 /* harmony import */ var _Modal__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(2875);
 /* harmony import */ var _LoginModal__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(3870);
+/* harmony import */ var _SideBar__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(2175);
 var __webpack_async_dependencies__ = __webpack_handle_async_dependencies__([_Header__WEBPACK_IMPORTED_MODULE_0__, _CampaignItem__WEBPACK_IMPORTED_MODULE_4__, _EventItem__WEBPACK_IMPORTED_MODULE_5__, _LoginModal__WEBPACK_IMPORTED_MODULE_8__]);
 ([_Header__WEBPACK_IMPORTED_MODULE_0__, _CampaignItem__WEBPACK_IMPORTED_MODULE_4__, _EventItem__WEBPACK_IMPORTED_MODULE_5__, _LoginModal__WEBPACK_IMPORTED_MODULE_8__] = __webpack_async_dependencies__.then ? (await __webpack_async_dependencies__)() : __webpack_async_dependencies__);
+
 
 
 
@@ -3827,21 +4353,24 @@ __webpack_async_result__();
 __webpack_require__.a(module, async (__webpack_handle_async_dependencies__, __webpack_async_result__) => { try {
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "$_": () => (/* reexport safe */ _common__WEBPACK_IMPORTED_MODULE_0__.$_),
-/* harmony export */   "FE": () => (/* reexport safe */ _Organization__WEBPACK_IMPORTED_MODULE_2__.F),
+/* harmony export */   "FE": () => (/* reexport safe */ _Organization__WEBPACK_IMPORTED_MODULE_3__.F),
+/* harmony export */   "Uv": () => (/* reexport safe */ _HomePage__WEBPACK_IMPORTED_MODULE_1__.Z),
 /* harmony export */   "YS": () => (/* reexport safe */ _common__WEBPACK_IMPORTED_MODULE_0__.YS),
 /* harmony export */   "h4": () => (/* reexport safe */ _common__WEBPACK_IMPORTED_MODULE_0__.h4),
-/* harmony export */   "iP": () => (/* reexport safe */ _Campaigns__WEBPACK_IMPORTED_MODULE_3__.Z),
-/* harmony export */   "jL": () => (/* reexport safe */ _Organization__WEBPACK_IMPORTED_MODULE_2__.j),
-/* harmony export */   "m3": () => (/* reexport safe */ _Login__WEBPACK_IMPORTED_MODULE_1__.Z),
-/* harmony export */   "zW": () => (/* reexport safe */ _Events__WEBPACK_IMPORTED_MODULE_4__.Z)
+/* harmony export */   "iP": () => (/* reexport safe */ _Campaigns__WEBPACK_IMPORTED_MODULE_4__.Z),
+/* harmony export */   "jL": () => (/* reexport safe */ _Organization__WEBPACK_IMPORTED_MODULE_3__.j),
+/* harmony export */   "m3": () => (/* reexport safe */ _Login__WEBPACK_IMPORTED_MODULE_2__.Z),
+/* harmony export */   "zW": () => (/* reexport safe */ _Events__WEBPACK_IMPORTED_MODULE_5__.Z)
 /* harmony export */ });
 /* harmony import */ var _common__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(1025);
-/* harmony import */ var _Login__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(5973);
-/* harmony import */ var _Organization__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(9700);
-/* harmony import */ var _Campaigns__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(9747);
-/* harmony import */ var _Events__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(1660);
-var __webpack_async_dependencies__ = __webpack_handle_async_dependencies__([_common__WEBPACK_IMPORTED_MODULE_0__, _Login__WEBPACK_IMPORTED_MODULE_1__, _Organization__WEBPACK_IMPORTED_MODULE_2__, _Campaigns__WEBPACK_IMPORTED_MODULE_3__, _Events__WEBPACK_IMPORTED_MODULE_4__]);
-([_common__WEBPACK_IMPORTED_MODULE_0__, _Login__WEBPACK_IMPORTED_MODULE_1__, _Organization__WEBPACK_IMPORTED_MODULE_2__, _Campaigns__WEBPACK_IMPORTED_MODULE_3__, _Events__WEBPACK_IMPORTED_MODULE_4__] = __webpack_async_dependencies__.then ? (await __webpack_async_dependencies__)() : __webpack_async_dependencies__);
+/* harmony import */ var _HomePage__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(2772);
+/* harmony import */ var _Login__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(5973);
+/* harmony import */ var _Organization__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(9700);
+/* harmony import */ var _Campaigns__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(9747);
+/* harmony import */ var _Events__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(1660);
+var __webpack_async_dependencies__ = __webpack_handle_async_dependencies__([_common__WEBPACK_IMPORTED_MODULE_0__, _HomePage__WEBPACK_IMPORTED_MODULE_1__, _Login__WEBPACK_IMPORTED_MODULE_2__, _Organization__WEBPACK_IMPORTED_MODULE_3__, _Campaigns__WEBPACK_IMPORTED_MODULE_4__, _Events__WEBPACK_IMPORTED_MODULE_5__]);
+([_common__WEBPACK_IMPORTED_MODULE_0__, _HomePage__WEBPACK_IMPORTED_MODULE_1__, _Login__WEBPACK_IMPORTED_MODULE_2__, _Organization__WEBPACK_IMPORTED_MODULE_3__, _Campaigns__WEBPACK_IMPORTED_MODULE_4__, _Events__WEBPACK_IMPORTED_MODULE_5__] = __webpack_async_dependencies__.then ? (await __webpack_async_dependencies__)() : __webpack_async_dependencies__);
+
 
 
 
@@ -3881,24 +4410,33 @@ const useOrganizationContext = ()=>{
 
 /***/ }),
 
-/***/ 7736:
+/***/ 8132:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 
 // EXPORTS
 __webpack_require__.d(__webpack_exports__, {
-  "w": () => (/* reexport */ helpers_appEnv)
+  "w": () => (/* reexport */ helpers_appEnv),
+  "O": () => (/* reexport */ helpers_colors)
 });
 
 ;// CONCATENATED MODULE: ./helpers/appEnv.js
 const appEnv = {
-    // apiUrl: "http://127.0.0.1:8000"
+    // apiUrl: "http://127.0.0.1:8000",
     apiUrl: "https://app.fundsdome.com",
     IMAGES_CDN_URL: "https://ik.imagekit.io/sahildhingra"
 };
 /* harmony default export */ const helpers_appEnv = (appEnv);
 
+;// CONCATENATED MODULE: ./helpers/colors.js
+const colors = {
+    Lavender: "#9f85f7",
+    ErrieBlack: "#1e1e1e"
+};
+/* harmony default export */ const helpers_colors = (colors);
+
 ;// CONCATENATED MODULE: ./helpers/index.js
+
 
 
 
