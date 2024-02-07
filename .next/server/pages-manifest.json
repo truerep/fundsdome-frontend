@@ -1,12 +1,6 @@
 {
   "/_app": "pages/_app.js",
-  "/_document": "pages/_document.js",
-  "/about": "pages/about.html",
-  "/": "pages/index.html",
-  "/login": "pages/login.html",
-  "/events": "pages/events.js",
-  "/[organization-slug]": "pages/[organization-slug].js",
-  "/campaigns": "pages/campaigns.js",
   "/_error": "pages/_error.js",
-  "/404": "pages/404.html"
+  "/_document": "pages/_document.js",
+  "/": "pages/index.js"
 }
