@@ -12,7 +12,6 @@ const Events = ({eventsList}) => {
 				<EventItem key={event._id} eventData={event} />
 			))
 		}
-		{console.log(eventsList, "<--eventsList")}
     </EventsWrapper>
   )
 }

@@ -685,13 +685,9 @@
         var st = window.pageYOffset || document.documentElement.scrollTop;
         if (st > 500) {
           if (st > lastScrollTop) {
-            // downscroll code
             $targetMenu.removeClass($toggleClass);
-            // console.log("down");
           } else {
-            // upscroll code
             $targetMenu.addClass($toggleClass);
-            // console.log("up");
           }
         } else {
           $targetMenu.removeClass($toggleClass);

@@ -41,7 +41,6 @@ const BannerContainer = () => {
   }
 
   useEffect(() => {
-    console.log(organizationData?.chat?._id, "<--organizationData")
     getDonations(organizationData?.chat?._id);
   }, [])
   

@@ -63,7 +63,6 @@ const Banner = ({
                 {
                     donations.length && donations.map((donation, index) => (
                         <EventItem key={donation._id}>
-                            {console.log(donation)}
                             <img src={donation?.event?.thumbnail} />
                             <DonationDetail>
                                 <h4>{donation?.event?.name}</h4>

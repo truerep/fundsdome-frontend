@@ -5,7 +5,8 @@ import styled from 'styled-components'
 const EventCard = ({
   eventName,
   event,
-  thumbnail
+  thumbnail,
+  eventData
 }) => {
   return (
     <EventCardWrapper>

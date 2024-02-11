@@ -11,7 +11,6 @@ const LoginContainer = () => {
   const handleLogin = async () => {
     try {
       const token = await loginUser(username, password);
-      console.log('Token:', token);
     } catch (error) {}
   };
     

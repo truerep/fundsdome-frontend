@@ -18,7 +18,6 @@ const EventItemContainer = ({eventData}) => {
     const targetAmount = res.reduce((acc, obj) => acc + obj.targetAmount, 0);
     const currentAmount = res.reduce((acc, obj) => acc + obj.currentAmount, 0);
     const percentage = parseInt((currentAmount / targetAmount) * 100);
-    console.log(res,"<--res")
 
     setDonationTotal({
       targetAmount,

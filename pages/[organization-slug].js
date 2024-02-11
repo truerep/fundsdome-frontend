@@ -10,7 +10,6 @@ import { Banner, Footer, Header, PageWrapper } from '@/components'
 const organization = ({data}) => {
   return (
     <>
-      {console.log(data, "<-- from api")}
         <Head>
             <title>
                 Organization Page

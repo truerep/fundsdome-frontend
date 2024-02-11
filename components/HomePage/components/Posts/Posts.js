@@ -9,7 +9,6 @@ const Posts = ({
 }) => {
   return (
     <Wrapper ref={sectionRef}>
-        {console.log(postsList, "<---postsList")}
         {
           postsList.length && postsList.map((postItem) => (
             <PostItem 

@@ -2,6 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import Modal from '../Modal'
 import LoginModal from '../LoginModal'
+import { convertTo12HourFormat, getDateFromString } from '@/utils'
 
 const EventItem = ({
 	donationTotal,
@@ -17,16 +18,15 @@ const EventItem = ({
 }) => {
   return (
     <Wrapper>
-		{
-			console.log(donationTotal, "<---donto")
-		}
 		<EventContext>
 			<EventThumbnail src={eventData?.thumbnail} />
 			<EventDateWrapper>
 				<EventTime>
-					<span class="event-card-grid__time__icon fa fa-clock"></span>10:00 aM - 2.00 PM
+				<span class="event-card-grid__time__icon fa fa-clock"></span>{convertTo12HourFormat(eventData?.time)}
+					{/* <span class="event-card-grid__time__icon fa fa-clock"></span>10:00 aM - 2.00 PM */}
 				</EventTime>
-				<EventDate>03 Sep</EventDate>
+				{/* <EventDate>03 Sep</EventDate> */}
+				<EventDate>{getDateFromString(eventData?.date)}</EventDate>
 			</EventDateWrapper>
 		</EventContext>
 		<Info>

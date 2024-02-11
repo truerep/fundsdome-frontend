@@ -19,7 +19,6 @@ const loginUser = async (username, password) => {
   
     setAuthTokenCookie(token);
     const authToken = cookies.get('auth_token', { domain: 'fundsdome.com' });
-    console.log(authToken, "<--authToken from cookies")
     return token;
   } catch (error) {
     console.error('Authentication failed', error);

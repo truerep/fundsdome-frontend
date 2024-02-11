@@ -57,7 +57,6 @@ const loginUser = async (username, password)=>{
         const authToken = cookies.get("auth_token", {
             domain: "fundsdome.com"
         });
-        console.log(authToken, "<--authToken from cookies");
         return token;
     } catch (error) {
         console.error("Authentication failed", error);
@@ -655,17 +654,14 @@ _common__WEBPACK_IMPORTED_MODULE_4__ = (__webpack_async_dependencies__.then ? (a
 
 
 const Events = ({ eventsList  })=>{
-    return /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(EventsWrapper, {
-        children: [
-            eventsList?.events.map((event)=>/*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_common__WEBPACK_IMPORTED_MODULE_4__/* .EventItem */ .cx, {
-                    eventData: event
-                }, event._id)),
-            console.log(eventsList, "<--eventsList")
-        ]
+    return /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(EventsWrapper, {
+        children: eventsList?.events.map((event)=>/*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_common__WEBPACK_IMPORTED_MODULE_4__/* .EventItem */ .cx, {
+                eventData: event
+            }, event._id))
     });
 };
 const EventsWrapper = styled_components__WEBPACK_IMPORTED_MODULE_2___default()(_common_UiElements__WEBPACK_IMPORTED_MODULE_3__/* .Container */ .W).withConfig({
-    componentId: "sc-35e891f7-0"
+    componentId: "sc-f46c3aba-0"
 })`
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
@@ -896,7 +892,6 @@ const Posts = ({ sectionRef , postsList , isLoading  })=>{
     return /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(Wrapper, {
         ref: sectionRef,
         children: [
-            console.log(postsList, "<---postsList"),
             postsList.length && postsList.map((postItem)=>/*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_components_common__WEBPACK_IMPORTED_MODULE_1__/* .PostItem */ .YS, {
                     organizationName: postItem?.title,
                     timeStamp: postItem?.createdAt,
@@ -908,7 +903,7 @@ const Posts = ({ sectionRef , postsList , isLoading  })=>{
     });
 };
 const Wrapper = styled_components__WEBPACK_IMPORTED_MODULE_3___default().div.withConfig({
-    componentId: "sc-fad9d4d8-0"
+    componentId: "sc-5f543265-0"
 })`
   height: 200vh;
   width: 560px;
@@ -999,7 +994,6 @@ const LoginContainer = ()=>{
     const handleLogin = async ()=>{
         try {
             const token = await (0,_api__WEBPACK_IMPORTED_MODULE_2__/* .loginUser */ .pH)(username, password);
-            console.log("Token:", token);
         } catch (error) {}
     };
     return /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_Login__WEBPACK_IMPORTED_MODULE_3__/* ["default"] */ .Z, {
@@ -1147,7 +1141,6 @@ const BannerContainer = ()=>{
         }
     };
     (0,react__WEBPACK_IMPORTED_MODULE_1__.useEffect)(()=>{
-        console.log(organizationData?.chat?._id, "<--organizationData");
         getDonations(organizationData?.chat?._id);
     }, []);
     return /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_Banner__WEBPACK_IMPORTED_MODULE_4__/* ["default"] */ .Z, {
@@ -1282,7 +1275,6 @@ const Banner = ({ donationTotal , organizationData , donations , donationId , se
                 children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(EventsWrapper, {
                     children: donations.length && donations.map((donation, index)=>/*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(EventItem, {
                             children: [
-                                console.log(donation),
                                 /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("img", {
                                     src: donation?.event?.thumbnail
                                 }),
@@ -1355,7 +1347,7 @@ const Banner = ({ donationTotal , organizationData , donations , donationId , se
     });
 };
 const BannerWrapper = styled_components__WEBPACK_IMPORTED_MODULE_2___default()(_components_common_UiElements__WEBPACK_IMPORTED_MODULE_3__/* .Container */ .W).withConfig({
-    componentId: "sc-b579ec82-0"
+    componentId: "sc-1ed577ba-0"
 })`
     border-radius: 10px;
     background: #FFF;
@@ -1373,7 +1365,7 @@ const BannerWrapper = styled_components__WEBPACK_IMPORTED_MODULE_2___default()(_
     }
 `;
 const OraganizationDetailsWrapper = styled_components__WEBPACK_IMPORTED_MODULE_2___default().div.withConfig({
-    componentId: "sc-b579ec82-1"
+    componentId: "sc-1ed577ba-1"
 })`
     display: flex;
     align-items: center;
@@ -1386,7 +1378,7 @@ const OraganizationDetailsWrapper = styled_components__WEBPACK_IMPORTED_MODULE_2
     }
 `;
 const OrganizationInfoWrapper = styled_components__WEBPACK_IMPORTED_MODULE_2___default().div.withConfig({
-    componentId: "sc-b579ec82-2"
+    componentId: "sc-1ed577ba-2"
 })`
     display: flex;
     align-items: center;
@@ -1406,7 +1398,7 @@ const OrganizationInfoWrapper = styled_components__WEBPACK_IMPORTED_MODULE_2___d
     }
 `;
 const OrganizationContext = styled_components__WEBPACK_IMPORTED_MODULE_2___default().div.withConfig({
-    componentId: "sc-b579ec82-3"
+    componentId: "sc-1ed577ba-3"
 })`
     h1 {
         font-family: Martel;
@@ -1433,7 +1425,7 @@ const OrganizationContext = styled_components__WEBPACK_IMPORTED_MODULE_2___defau
     }
 `;
 const OrganizationActionLinks = styled_components__WEBPACK_IMPORTED_MODULE_2___default().div.withConfig({
-    componentId: "sc-b579ec82-4"
+    componentId: "sc-1ed577ba-4"
 })`
     flex: 1;
     display: flex;
@@ -1453,7 +1445,7 @@ const OrganizationActionLinks = styled_components__WEBPACK_IMPORTED_MODULE_2___d
     }
 `;
 const Donation = styled_components__WEBPACK_IMPORTED_MODULE_2___default().div.withConfig({
-    componentId: "sc-b579ec82-5"
+    componentId: "sc-1ed577ba-5"
 })`
     width: 320px;
 
@@ -1462,7 +1454,7 @@ const Donation = styled_components__WEBPACK_IMPORTED_MODULE_2___default().div.wi
     }
 `;
 const DonateButton = styled_components__WEBPACK_IMPORTED_MODULE_2___default().a.withConfig({
-    componentId: "sc-b579ec82-6"
+    componentId: "sc-1ed577ba-6"
 })`
     display: inline-block;
     background-color: #9F85F7;
@@ -1480,10 +1472,10 @@ const DonateButton = styled_components__WEBPACK_IMPORTED_MODULE_2___default().a.
     }
 `;
 const ProgressBox = styled_components__WEBPACK_IMPORTED_MODULE_2___default().div.withConfig({
-    componentId: "sc-b579ec82-7"
+    componentId: "sc-1ed577ba-7"
 })``;
 const ProgressBar = styled_components__WEBPACK_IMPORTED_MODULE_2___default().div.withConfig({
-    componentId: "sc-b579ec82-8"
+    componentId: "sc-1ed577ba-8"
 })`
 	width: 100%;
     height: 7px;
@@ -1492,7 +1484,7 @@ const ProgressBar = styled_components__WEBPACK_IMPORTED_MODULE_2___default().div
     position: relative;
 `;
 const ProgressFilled = styled_components__WEBPACK_IMPORTED_MODULE_2___default().div.withConfig({
-    componentId: "sc-b579ec82-9"
+    componentId: "sc-1ed577ba-9"
 })`
 	position: relative;
     position: absolute;
@@ -1533,7 +1525,7 @@ const ProgressFilled = styled_components__WEBPACK_IMPORTED_MODULE_2___default().
 	}
 `;
 const ProgressNumber = styled_components__WEBPACK_IMPORTED_MODULE_2___default().div.withConfig({
-    componentId: "sc-b579ec82-10"
+    componentId: "sc-1ed577ba-10"
 })`
 	position: absolute;
     bottom: calc(100% + 13px);
@@ -1546,7 +1538,7 @@ const ProgressNumber = styled_components__WEBPACK_IMPORTED_MODULE_2___default().
     color: var(--cleenhearts-purple, #965995)
 `;
 const DonationAmount = styled_components__WEBPACK_IMPORTED_MODULE_2___default().div.withConfig({
-    componentId: "sc-b579ec82-11"
+    componentId: "sc-1ed577ba-11"
 })`
 	margin-top: 11px;
     display: flex;
@@ -1564,7 +1556,7 @@ const DonationAmount = styled_components__WEBPACK_IMPORTED_MODULE_2___default().
 	}
 `;
 const EventsWrapper = styled_components__WEBPACK_IMPORTED_MODULE_2___default().div.withConfig({
-    componentId: "sc-b579ec82-12"
+    componentId: "sc-1ed577ba-12"
 })`
     background-color: #fff;
     padding: 20px;
@@ -1575,7 +1567,7 @@ const EventsWrapper = styled_components__WEBPACK_IMPORTED_MODULE_2___default().d
     }
 `;
 const EventItem = styled_components__WEBPACK_IMPORTED_MODULE_2___default().div.withConfig({
-    componentId: "sc-b579ec82-13"
+    componentId: "sc-1ed577ba-13"
 })`
     display: flex;
     align-items: center;
@@ -1606,13 +1598,13 @@ const EventItem = styled_components__WEBPACK_IMPORTED_MODULE_2___default().div.w
     }
 `;
 const DonationDetail = styled_components__WEBPACK_IMPORTED_MODULE_2___default().div.withConfig({
-    componentId: "sc-b579ec82-14"
+    componentId: "sc-1ed577ba-14"
 })`
     padding: 0 15px;
     flex: 1;
 `;
 const DonateBtn = styled_components__WEBPACK_IMPORTED_MODULE_2___default().button.withConfig({
-    componentId: "sc-b579ec82-15"
+    componentId: "sc-1ed577ba-15"
 })`
     margin-left: auto;
     display: inline-block;
@@ -1633,7 +1625,7 @@ const DonateBtn = styled_components__WEBPACK_IMPORTED_MODULE_2___default().butto
     }
 `;
 const AmountModalWrapper = styled_components__WEBPACK_IMPORTED_MODULE_2___default().div.withConfig({
-    componentId: "sc-b579ec82-16"
+    componentId: "sc-1ed577ba-16"
 })`
     background-color: #fff;
     padding: 20px;
@@ -1775,28 +1767,22 @@ var external_styled_components_default = /*#__PURE__*/__webpack_require__.n(exte
 var OrganizationContext = __webpack_require__(9076);
 ;// CONCATENATED MODULE: ./utils/eventTiming.js
 const eventTiming = (dateTime)=>{
-    console.log(dateTime, "<---");
     const eventDate = new Date(dateTime?.date);
-    // Format date
     const options = {
         year: "numeric",
         month: "short",
         day: "numeric"
     };
     const formattedDate = eventDate.toLocaleDateString("en-US", options);
-    // Format time
     const formattedTime = dateTime?.time.replace(/(\d{2}):(\d{2})/, (match, hour, minute)=>{
         const hh = parseInt(hour, 10);
         const meridiem = hh < 12 ? "AM" : "PM";
         const formattedHour = hh % 12 || 12; // Convert to 12-hour format
         return `${formattedHour}:${minute}${meridiem}`;
     });
-    // Current date and time
     const currentDate = new Date();
     const isUpcoming = eventDate > currentDate;
-    // Determine the status (starts at or ended on)
     const status = isUpcoming ? "Starts" : "Ended";
-    // Combine formatted date and time
     const result = `${status} ${formattedTime}, ${formattedDate}`;
     return result;
 };
@@ -1807,7 +1793,7 @@ const eventTiming = (dateTime)=>{
 
 
 
-const EventCard = ({ eventName , event , thumbnail  })=>{
+const EventCard = ({ eventName , event , thumbnail , eventData  })=>{
     return /*#__PURE__*/ (0,jsx_runtime_.jsxs)(EventCardWrapper, {
         children: [
             /*#__PURE__*/ jsx_runtime_.jsx(EventImageWrapper, {
@@ -1841,7 +1827,7 @@ const EventCard = ({ eventName , event , thumbnail  })=>{
     });
 };
 const EventCardWrapper = external_styled_components_default().div.withConfig({
-    componentId: "sc-c12a5b04-0"
+    componentId: "sc-e09be39b-0"
 })`
     border-radius: 5px;
     border: 1px solid #9F85F7;
@@ -1855,7 +1841,7 @@ const EventCardWrapper = external_styled_components_default().div.withConfig({
     }
 `;
 const EventImageWrapper = external_styled_components_default().div.withConfig({
-    componentId: "sc-c12a5b04-1"
+    componentId: "sc-e09be39b-1"
 })`
     width: 100px;
     flex-shrink: 0;
@@ -1865,14 +1851,14 @@ const EventImageWrapper = external_styled_components_default().div.withConfig({
     }
 `;
 const EventImage = external_styled_components_default().img.withConfig({
-    componentId: "sc-c12a5b04-2"
+    componentId: "sc-e09be39b-2"
 })`
     height: 100%;
     width: 100%;
     object-fit: cover;
 `;
 const EventInfo = external_styled_components_default().div.withConfig({
-    componentId: "sc-c12a5b04-3"
+    componentId: "sc-e09be39b-3"
 })`
     padding: 11px 14px 13px;
     color: #7D7D7D;
@@ -1881,7 +1867,7 @@ const EventInfo = external_styled_components_default().div.withConfig({
     flex: 1;
 `;
 const EventTitle = external_styled_components_default().h3.withConfig({
-    componentId: "sc-c12a5b04-4"
+    componentId: "sc-e09be39b-4"
 })`
     color: #000;
     font-size: 19px;
@@ -1889,12 +1875,12 @@ const EventTitle = external_styled_components_default().h3.withConfig({
     line-height: normal;
 `;
 const EventTiming = external_styled_components_default().p.withConfig({
-    componentId: "sc-c12a5b04-5"
+    componentId: "sc-e09be39b-5"
 })`
     padding: 7px 0 9px;
 `;
 const DonationInfo = external_styled_components_default().div.withConfig({
-    componentId: "sc-c12a5b04-6"
+    componentId: "sc-e09be39b-6"
 })`
     display: flex;
     align-items: center;
@@ -1902,12 +1888,12 @@ const DonationInfo = external_styled_components_default().div.withConfig({
     padding-top: 5px;
 `;
 const DonationAmount = external_styled_components_default().p.withConfig({
-    componentId: "sc-c12a5b04-7"
+    componentId: "sc-e09be39b-7"
 })`
 
 `;
 const DonationContributors = external_styled_components_default().p.withConfig({
-    componentId: "sc-c12a5b04-8"
+    componentId: "sc-e09be39b-8"
 })`
 
 `;
@@ -1923,7 +1909,8 @@ const EventCardContainer = ()=>{
     return organizationData?.events.map((event)=>/*#__PURE__*/ jsx_runtime_.jsx(EventCard_EventCard, {
             eventName: event?.name,
             event: event,
-            thumbnail: event?.thumbnail || ""
+            thumbnail: event?.thumbnail || "",
+            eventData: event
         }, event._id));
 };
 /* harmony default export */ const EventCard_container = (EventCardContainer);
@@ -2006,7 +1993,6 @@ const PostsContainer = ()=>{
         if (userInfo?._id === organizationData?.chat?.groupAdmin?._id) {
             setIsAdmin(true);
         }
-        console.log(userInfo);
     };
     (0,react__WEBPACK_IMPORTED_MODULE_1__.useEffect)(()=>{
         userInfo();
@@ -2584,7 +2570,6 @@ const EventItemContainer = ({ eventData  })=>{
         const targetAmount = res.reduce((acc, obj)=>acc + obj.targetAmount, 0);
         const currentAmount = res.reduce((acc, obj)=>acc + obj.currentAmount, 0);
         const percentage = parseInt(currentAmount / targetAmount * 100);
-        console.log(res, "<--res");
         setDonationTotal({
             targetAmount,
             currentAmount,
@@ -2640,8 +2625,11 @@ __webpack_require__.a(module, async (__webpack_handle_async_dependencies__, __we
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(styled_components__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var _Modal__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(2875);
 /* harmony import */ var _LoginModal__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(3870);
+/* harmony import */ var _utils__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(1453);
+/* harmony import */ var _utils__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(6242);
 var __webpack_async_dependencies__ = __webpack_handle_async_dependencies__([_LoginModal__WEBPACK_IMPORTED_MODULE_4__]);
 _LoginModal__WEBPACK_IMPORTED_MODULE_4__ = (__webpack_async_dependencies__.then ? (await __webpack_async_dependencies__)() : __webpack_async_dependencies__)[0];
+
 
 
 
@@ -2650,7 +2638,6 @@ _LoginModal__WEBPACK_IMPORTED_MODULE_4__ = (__webpack_async_dependencies__.then 
 const EventItem = ({ donationTotal , eventData , showAmountModal , setShowAmountModal , donationAmount , showLoginModal , setShowLoginModal , setDonationId , setDonationAmount , handleDonation  })=>{
     return /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(Wrapper, {
         children: [
-            console.log(donationTotal, "<---donto"),
             /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(EventContext, {
                 children: [
                     /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(EventThumbnail, {
@@ -2663,11 +2650,11 @@ const EventItem = ({ donationTotal , eventData , showAmountModal , setShowAmount
                                     /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("span", {
                                         class: "event-card-grid__time__icon fa fa-clock"
                                     }),
-                                    "10:00 aM - 2.00 PM"
+                                    (0,_utils__WEBPACK_IMPORTED_MODULE_5__/* ["default"] */ .Z)(eventData?.time)
                                 ]
                             }),
                             /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(EventDate, {
-                                children: "03 Sep"
+                                children: (0,_utils__WEBPACK_IMPORTED_MODULE_6__/* ["default"] */ .Z)(eventData?.date)
                             })
                         ]
                     })
@@ -2780,7 +2767,7 @@ const EventItem = ({ donationTotal , eventData , showAmountModal , setShowAmount
     });
 };
 const Wrapper = styled_components__WEBPACK_IMPORTED_MODULE_2___default().div.withConfig({
-    componentId: "sc-a9e0cdb3-0"
+    componentId: "sc-fa438547-0"
 })`
 	position: relative;
 	border-radius: 20px;
@@ -2811,20 +2798,20 @@ const Wrapper = styled_components__WEBPACK_IMPORTED_MODULE_2___default().div.wit
 	}
 `;
 const EventContext = styled_components__WEBPACK_IMPORTED_MODULE_2___default().div.withConfig({
-    componentId: "sc-a9e0cdb3-1"
+    componentId: "sc-fa438547-1"
 })`
 	height: 366px;
 	position: relative;
 `;
 const EventThumbnail = styled_components__WEBPACK_IMPORTED_MODULE_2___default().img.withConfig({
-    componentId: "sc-a9e0cdb3-2"
+    componentId: "sc-fa438547-2"
 })`
 	height: 100%;
 	width: 100%;
 	object-fit: cover;
 `;
 const EventDateWrapper = styled_components__WEBPACK_IMPORTED_MODULE_2___default().div.withConfig({
-    componentId: "sc-a9e0cdb3-3"
+    componentId: "sc-fa438547-3"
 })`
 	position: absolute;
 	left: 0;
@@ -2836,7 +2823,7 @@ const EventDateWrapper = styled_components__WEBPACK_IMPORTED_MODULE_2___default(
 	justify-content: space-between;
 `;
 const EventTime = styled_components__WEBPACK_IMPORTED_MODULE_2___default().div.withConfig({
-    componentId: "sc-a9e0cdb3-4"
+    componentId: "sc-fa438547-4"
 })`
 	padding: 0 19px 0 30px;
     line-height: 36px;
@@ -2849,7 +2836,7 @@ const EventTime = styled_components__WEBPACK_IMPORTED_MODULE_2___default().div.w
     text-transform: uppercase;
 `;
 const EventDate = styled_components__WEBPACK_IMPORTED_MODULE_2___default().div.withConfig({
-    componentId: "sc-a9e0cdb3-5"
+    componentId: "sc-fa438547-5"
 })`
 	padding: 0 31px 0 13px;
     line-height: 36px;
@@ -2862,7 +2849,7 @@ const EventDate = styled_components__WEBPACK_IMPORTED_MODULE_2___default().div.w
     text-transform: uppercase;
 `;
 const Info = styled_components__WEBPACK_IMPORTED_MODULE_2___default().div.withConfig({
-    componentId: "sc-a9e0cdb3-6"
+    componentId: "sc-fa438547-6"
 })`
 	position: relative;
 	border: 1px solid #D7D3CB;
@@ -2871,7 +2858,7 @@ const Info = styled_components__WEBPACK_IMPORTED_MODULE_2___default().div.withCo
 	border-radius: 0 0 20px 20px;
 `;
 const Title = styled_components__WEBPACK_IMPORTED_MODULE_2___default().h3.withConfig({
-    componentId: "sc-a9e0cdb3-7"
+    componentId: "sc-fa438547-7"
 })`
 	text-transform: capitalize;
     font-size: 24px;
@@ -2881,7 +2868,7 @@ const Title = styled_components__WEBPACK_IMPORTED_MODULE_2___default().h3.withCo
     color: #351C42;
 `;
 const OrganizerInfo = styled_components__WEBPACK_IMPORTED_MODULE_2___default().ul.withConfig({
-    componentId: "sc-a9e0cdb3-8"
+    componentId: "sc-fa438547-8"
 })`
 	margin: 0;
     padding: 0;
@@ -2923,7 +2910,7 @@ const OrganizerInfo = styled_components__WEBPACK_IMPORTED_MODULE_2___default().u
 	}
 `;
 const DonationWrapper = styled_components__WEBPACK_IMPORTED_MODULE_2___default().div.withConfig({
-    componentId: "sc-a9e0cdb3-9"
+    componentId: "sc-fa438547-9"
 })`
 	display: flex;
 	align-items: center;
@@ -2932,7 +2919,7 @@ const DonationWrapper = styled_components__WEBPACK_IMPORTED_MODULE_2___default()
 	border-top: 1px solid #D7D3CB;
 `;
 const DonateBtn = styled_components__WEBPACK_IMPORTED_MODULE_2___default().button.withConfig({
-    componentId: "sc-a9e0cdb3-10"
+    componentId: "sc-fa438547-10"
 })`
     margin-left: auto;
     display: inline-block;
@@ -2954,16 +2941,16 @@ const DonateBtn = styled_components__WEBPACK_IMPORTED_MODULE_2___default().butto
     }
 `;
 const Donation = styled_components__WEBPACK_IMPORTED_MODULE_2___default().div.withConfig({
-    componentId: "sc-a9e0cdb3-11"
+    componentId: "sc-fa438547-11"
 })`
 	padding: 45px 20px 0;
 	flex: 1;
 `;
 const ProgressBox = styled_components__WEBPACK_IMPORTED_MODULE_2___default().div.withConfig({
-    componentId: "sc-a9e0cdb3-12"
+    componentId: "sc-fa438547-12"
 })``;
 const ProgressBar = styled_components__WEBPACK_IMPORTED_MODULE_2___default().div.withConfig({
-    componentId: "sc-a9e0cdb3-13"
+    componentId: "sc-fa438547-13"
 })`
 	width: 100%;
     height: 7px;
@@ -2972,7 +2959,7 @@ const ProgressBar = styled_components__WEBPACK_IMPORTED_MODULE_2___default().div
     position: relative;
 `;
 const ProgressFilled = styled_components__WEBPACK_IMPORTED_MODULE_2___default().div.withConfig({
-    componentId: "sc-a9e0cdb3-14"
+    componentId: "sc-fa438547-14"
 })`
 	position: relative;
     position: absolute;
@@ -3013,7 +3000,7 @@ const ProgressFilled = styled_components__WEBPACK_IMPORTED_MODULE_2___default().
 	}
 `;
 const ProgressNumber = styled_components__WEBPACK_IMPORTED_MODULE_2___default().div.withConfig({
-    componentId: "sc-a9e0cdb3-15"
+    componentId: "sc-fa438547-15"
 })`
 	position: absolute;
     bottom: calc(100% + 13px);
@@ -3026,7 +3013,7 @@ const ProgressNumber = styled_components__WEBPACK_IMPORTED_MODULE_2___default().
     color: var(--cleenhearts-purple, #965995)
 `;
 const DonationAmount = styled_components__WEBPACK_IMPORTED_MODULE_2___default().div.withConfig({
-    componentId: "sc-a9e0cdb3-16"
+    componentId: "sc-fa438547-16"
 })`
 	margin-top: 11px;
     display: flex;
@@ -3044,7 +3031,7 @@ const DonationAmount = styled_components__WEBPACK_IMPORTED_MODULE_2___default().
 	}
 `;
 const AmountModalWrapper = styled_components__WEBPACK_IMPORTED_MODULE_2___default().div.withConfig({
-    componentId: "sc-a9e0cdb3-17"
+    componentId: "sc-fa438547-17"
 })`
     background-color: #fff;
     padding: 20px;
@@ -4462,9 +4449,7 @@ const authService = async ()=>{
     const authToken = cookies.get("auth_token", {
         domain: "fundsdome.com"
     });
-    console.log(authToken, "<--authToken from cookies");
     const isAuthenticated = await (0,_api__WEBPACK_IMPORTED_MODULE_0__/* .getUserInfo */ .bG)();
-    console.log(isAuthenticated, "<--isAuthenticaed");
     if (isAuthenticated?._id) {
         return true;
     } else {
@@ -4493,6 +4478,61 @@ _authService__WEBPACK_IMPORTED_MODULE_0__ = (__webpack_async_dependencies__.then
 
 __webpack_async_result__();
 } catch(e) { __webpack_async_result__(e); } });
+
+/***/ }),
+
+/***/ 1453:
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "Z": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+const convertTo12HourFormat = (time)=>{
+    var splitTime = time.split(":");
+    var hours = parseInt(splitTime[0]);
+    var minutes = splitTime[1];
+    var meridiem = hours < 12 ? "AM" : "PM";
+    if (hours === 0) {
+        hours = 12;
+    } else if (hours > 12) {
+        hours = hours - 12;
+    }
+    return hours + ":" + minutes + " " + meridiem;
+};
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (convertTo12HourFormat);
+
+
+/***/ }),
+
+/***/ 6242:
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "Z": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+const getDateFromString = (dateString)=>{
+    var date = new Date(dateString);
+    var day = date.getDate();
+    var monthIndex = date.getMonth();
+    var months = [
+        "Jan",
+        "Feb",
+        "Mar",
+        "Apr",
+        "May",
+        "Jun",
+        "Jul",
+        "Aug",
+        "Sep",
+        "Oct",
+        "Nov",
+        "Dec"
+    ];
+    var monthName = months[monthIndex];
+    return day + " " + monthName;
+};
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (getDateFromString);
+
 
 /***/ })
 

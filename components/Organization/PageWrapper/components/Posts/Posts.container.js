@@ -15,7 +15,6 @@ const PostsContainer = () => {
     if(userInfo?._id === organizationData?.chat?.groupAdmin?._id) {
       setIsAdmin(true)
     }
-    console.log(userInfo)
   }
 
   useEffect(() => {
